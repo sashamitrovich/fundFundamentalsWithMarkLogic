@@ -3,19 +3,19 @@
     "title" : "FundamentalInformation",
     "version" : "0.0.1",
     "baseUri" : "http://example.org/",
-    "description" : "Fund fundamental information (master data)"
+    "description" : "Fundamental (master) data about Funds our organization is managing"
   },
   "definitions" : {
     "FundamentalInformation" : {
       "required" : [ ],
       "pii" : [ ],
-      "elementRangeIndex" : [ ],
-      "rangeIndex" : [ ],
+      "elementRangeIndex" : [ "InceptionDate" ],
+      "rangeIndex" : [ "ExchangePlace", "Currency", "ShareClassDistributionPolicy" ],
       "wordLexicon" : [ ],
       "properties" : {
         "FundName" : {
           "datatype" : "string",
-          "description" : "name of the fund",
+          "description" : "Name of the Fund",
           "collation" : "http://marklogic.com/collation/codepoint"
         },
         "BloombergSymbol" : {
@@ -24,14 +24,16 @@
         },
         "ExchangePlace" : {
           "datatype" : "string",
+          "description" : "Where is is traded",
           "collation" : "http://marklogic.com/collation/codepoint"
         },
         "InceptionDate" : {
-          "datatype" : "date"
+          "datatype" : "date",
+          "description" : "Date of founding"
         },
         "Currency" : {
           "datatype" : "string",
-          "description" : "trading currency",
+          "description" : "",
           "collation" : "http://marklogic.com/collation/codepoint"
         },
         "OngoingCharges" : {

@@ -4,6 +4,31 @@
     "prefix" : "es",
     "namespace-uri" : "http://marklogic.com/entity-services"
   } ],
-  "range-element-index" : [ ],
+  "range-path-index" : [ {
+    "invalid-values" : "reject",
+    "path-expression" : "//*:instance/FundamentalInformation/ExchangePlace",
+    "range-value-positions" : false,
+    "scalar-type" : "string",
+    "collation" : "http://marklogic.com/collation/codepoint"
+  }, {
+    "invalid-values" : "reject",
+    "path-expression" : "//*:instance/FundamentalInformation/Currency",
+    "range-value-positions" : false,
+    "scalar-type" : "string",
+    "collation" : "http://marklogic.com/collation/codepoint"
+  }, {
+    "invalid-values" : "reject",
+    "path-expression" : "//*:instance/FundamentalInformation/ShareClassDistributionPolicy",
+    "range-value-positions" : false,
+    "scalar-type" : "string",
+    "collation" : "http://marklogic.com/collation/codepoint"
+  } ],
+  "range-element-index" : [ {
+    "invalid-values" : "reject",
+    "localname" : "InceptionDate",
+    "namespace-uri" : null,
+    "range-value-positions" : false,
+    "scalar-type" : "date"
+  } ],
   "database-name" : "%%mlStagingDbName%%"
 }

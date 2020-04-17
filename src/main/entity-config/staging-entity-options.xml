@@ -18,6 +18,44 @@
       <search:element ns="http://marklogic.com/entity-services" name="title"/>
     </search:value>
   </search:constraint>
+  <search:constraint name="ExchangePlace">
+    <search:range type="xs:string" facet="true" collation="http://marklogic.com/collation/codepoint">
+      <search:path-index xmlns:es="http://marklogic.com/entity-services">//*:instance/FundamentalInformation/ExchangePlace</search:path-index>
+      <search:facet-option>limit=25</search:facet-option>
+    </search:range>
+  </search:constraint>
+  <search:constraint name="Currency">
+    <search:range type="xs:string" facet="true" collation="http://marklogic.com/collation/codepoint">
+      <search:path-index xmlns:es="http://marklogic.com/entity-services">//*:instance/FundamentalInformation/Currency</search:path-index>
+      <search:facet-option>limit=25</search:facet-option>
+    </search:range>
+  </search:constraint>
+  <search:constraint name="ShareClassDistributionPolicy">
+    <search:range type="xs:string" facet="true" collation="http://marklogic.com/collation/codepoint">
+      <search:path-index xmlns:es="http://marklogic.com/entity-services">//*:instance/FundamentalInformation/ShareClassDistributionPolicy</search:path-index>
+      <search:facet-option>limit=25</search:facet-option>
+    </search:range>
+  </search:constraint>
+  <search:constraint name="InceptionDate">
+    <search:range type="xs:date" facet="true">
+      <search:element ns="" name="InceptionDate" xmlns:es="http://marklogic.com/entity-services"/>
+      <search:facet-option>limit=25</search:facet-option>
+    </search:range>
+  </search:constraint>
+  <search:tuples name="FundamentalInformation">
+    <search:range type="xs:string" facet="true" collation="http://marklogic.com/collation/codepoint">
+      <search:path-index xmlns:es="http://marklogic.com/entity-services">//*:instance/FundamentalInformation/ExchangePlace</search:path-index>
+    </search:range>
+    <search:range type="xs:string" facet="true" collation="http://marklogic.com/collation/codepoint">
+      <search:path-index xmlns:es="http://marklogic.com/entity-services">//*:instance/FundamentalInformation/Currency</search:path-index>
+    </search:range>
+    <search:range type="xs:string" facet="true" collation="http://marklogic.com/collation/codepoint">
+      <search:path-index xmlns:es="http://marklogic.com/entity-services">//*:instance/FundamentalInformation/ShareClassDistributionPolicy</search:path-index>
+    </search:range>
+    <search:range type="xs:date" facet="true">
+      <search:element ns="" name="InceptionDate" xmlns:es="http://marklogic.com/entity-services"/>
+    </search:range>
+  </search:tuples>
   <!--Uncomment to return no results for a blank search, rather than the default of all results
  <search:term xmlns:search="http://marklogic.com/appservices/search">
   <search:empty apply="no-results"/>
