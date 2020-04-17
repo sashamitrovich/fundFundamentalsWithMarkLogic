@@ -1,0 +1,197 @@
+{
+  "name" : "funds-master-data",
+  "description" : "null",
+  "batchSize" : 100,
+  "threadCount" : 4,
+  "stopOnError" : false,
+  "options" : { },
+  "version" : 0,
+  "steps" : {
+    "1" : {
+      "name" : "masterdatareports-source",
+      "description" : "",
+      "options" : {
+        "additionalCollections" : [ ],
+        "headers" : {
+          "sources" : [ {
+            "name" : "funds-master-data"
+          } ],
+          "createdOn" : "currentDateTime",
+          "createdBy" : "currentUser"
+        },
+        "sourceQuery" : "cts.collectionQuery([])",
+        "collections" : [ "masterdatareports-source" ],
+        "permissions" : "data-hub-operator,read,data-hub-operator,update",
+        "outputFormat" : "json",
+        "targetDatabase" : "funds-data-hub-STAGING"
+      },
+      "customHook" : {
+        "module" : "",
+        "parameters" : { },
+        "user" : "",
+        "runBefore" : false
+      },
+      "retryLimit" : 0,
+      "batchSize" : 100,
+      "threadCount" : 4,
+      "stepDefinitionName" : "default-ingestion",
+      "stepDefinitionType" : "INGESTION",
+      "fileLocations" : {
+        "inputFilePath" : "/Users/smitrovi/MarkLogic/dev/fonds-demo/source/masterdatareports.com",
+        "inputFileType" : "csv",
+        "outputURIReplacement" : "",
+        "separator" : ","
+      }
+    },
+    "2" : {
+      "name" : "openfunds-source",
+      "description" : "",
+      "options" : {
+        "additionalCollections" : [ ],
+        "headers" : {
+          "sources" : [ {
+            "name" : "funds-master-data"
+          } ],
+          "createdOn" : "currentDateTime",
+          "createdBy" : "currentUser"
+        },
+        "sourceQuery" : "cts.collectionQuery([])",
+        "collections" : [ "openfunds-source" ],
+        "permissions" : "data-hub-operator,read,data-hub-operator,update",
+        "outputFormat" : "json",
+        "targetDatabase" : "funds-data-hub-STAGING"
+      },
+      "customHook" : {
+        "module" : "",
+        "parameters" : { },
+        "user" : "",
+        "runBefore" : false
+      },
+      "retryLimit" : 0,
+      "batchSize" : 100,
+      "threadCount" : 4,
+      "stepDefinitionName" : "default-ingestion",
+      "stepDefinitionType" : "INGESTION",
+      "fileLocations" : {
+        "inputFilePath" : "/Users/smitrovi/MarkLogic/dev/fonds-demo/source/openfunds",
+        "inputFileType" : "csv",
+        "outputURIReplacement" : "",
+        "separator" : ";"
+      }
+    },
+    "3" : {
+      "name" : "xetra-source",
+      "description" : "",
+      "options" : {
+        "additionalCollections" : [ ],
+        "headers" : {
+          "sources" : [ {
+            "name" : "funds-master-data"
+          } ],
+          "createdOn" : "currentDateTime",
+          "createdBy" : "currentUser"
+        },
+        "sourceQuery" : "cts.collectionQuery([])",
+        "collections" : [ "xetra-source" ],
+        "permissions" : "data-hub-operator,read,data-hub-operator,update",
+        "outputFormat" : "json",
+        "targetDatabase" : "funds-data-hub-STAGING"
+      },
+      "customHook" : {
+        "module" : "",
+        "parameters" : { },
+        "user" : "",
+        "runBefore" : false
+      },
+      "retryLimit" : 0,
+      "batchSize" : 100,
+      "threadCount" : 4,
+      "stepDefinitionName" : "default-ingestion",
+      "stepDefinitionType" : "INGESTION",
+      "fileLocations" : {
+        "inputFilePath" : "/Users/smitrovi/MarkLogic/dev/fonds-demo/source/xetra",
+        "inputFileType" : "csv",
+        "outputURIReplacement" : "",
+        "separator" : ";"
+      }
+    },
+    "4" : {
+      "name" : "harmonize-masterdatareports",
+      "description" : "",
+      "options" : {
+        "additionalCollections" : [ "harmonized" ],
+        "sourceQuery" : "cts.collectionQuery([\"masterdatareports-source\"])",
+        "targetEntity" : "FundamentalInformation",
+        "collections" : [ "harmonize-masterdatareports", "FundamentalInformation", "harmonized" ],
+        "sourceDatabase" : "funds-data-hub-STAGING",
+        "permissions" : "data-hub-operator,read,data-hub-operator,update",
+        "sourceCollection" : "masterdatareports-source",
+        "outputFormat" : "json",
+        "targetDatabase" : "funds-data-hub-FINAL"
+      },
+      "customHook" : {
+        "module" : "",
+        "parameters" : { },
+        "user" : "",
+        "runBefore" : false
+      },
+      "retryLimit" : 0,
+      "batchSize" : 100,
+      "threadCount" : 4,
+      "stepDefinitionName" : "harmonize-masterdatareports",
+      "stepDefinitionType" : "CUSTOM"
+    },
+    "5" : {
+      "name" : "harmonize-openfunds",
+      "description" : "",
+      "options" : {
+        "additionalCollections" : [ ],
+        "sourceQuery" : "cts.collectionQuery([\"openfunds-source\"])",
+        "targetEntity" : "FundamentalInformation",
+        "collections" : [ "harmonize-openfunds", "FundamentalInformation" ],
+        "sourceDatabase" : "funds-data-hub-STAGING",
+        "permissions" : "data-hub-operator,read,data-hub-operator,update",
+        "sourceCollection" : "openfunds-source",
+        "outputFormat" : "json",
+        "targetDatabase" : "funds-data-hub-FINAL"
+      },
+      "customHook" : {
+        "module" : "",
+        "parameters" : { },
+        "user" : "",
+        "runBefore" : false
+      },
+      "retryLimit" : 0,
+      "batchSize" : 100,
+      "threadCount" : 4,
+      "stepDefinitionName" : "harmonize-openfunds",
+      "stepDefinitionType" : "CUSTOM"
+    },
+    "6" : {
+      "name" : "xetra-harmonize",
+      "description" : "",
+      "options" : {
+        "additionalCollections" : [ ],
+        "sourceQuery" : "cts.collectionQuery([\"xetra-source\"])",
+        "targetEntity" : "FundamentalInformation",
+        "collections" : [ "xetra-harmonize", "FundamentalInformation" ],
+        "sourceDatabase" : "funds-data-hub-STAGING",
+        "permissions" : "data-hub-operator,read,data-hub-operator,update",
+        "sourceCollection" : "xetra-source",
+        "outputFormat" : "json",
+        "targetDatabase" : "funds-data-hub-FINAL"
+      },
+      "customHook" : {
+        "module" : "",
+        "parameters" : { },
+        "user" : "",
+        "runBefore" : false
+      },
+      "retryLimit" : 0,
+      "batchSize" : 100,
+      "threadCount" : 4,
+      "stepDefinitionName" : "xetra-harmonize",
+      "stepDefinitionType" : "CUSTOM"
+    }
+  }
+}

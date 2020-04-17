@@ -1,0 +1,56 @@
+{
+  "info" : {
+    "title" : "FundamentalInformation",
+    "version" : "0.0.1",
+    "baseUri" : "http://example.org/",
+    "description" : "Fund fundamental information (master data)"
+  },
+  "definitions" : {
+    "FundamentalInformation" : {
+      "required" : [ ],
+      "pii" : [ ],
+      "elementRangeIndex" : [ ],
+      "rangeIndex" : [ ],
+      "wordLexicon" : [ ],
+      "properties" : {
+        "FundName" : {
+          "datatype" : "string",
+          "description" : "name of the fund",
+          "collation" : "http://marklogic.com/collation/codepoint"
+        },
+        "BloombergSymbol" : {
+          "datatype" : "string",
+          "collation" : "http://marklogic.com/collation/codepoint"
+        },
+        "ExchangePlace" : {
+          "datatype" : "string",
+          "collation" : "http://marklogic.com/collation/codepoint"
+        },
+        "InceptionDate" : {
+          "datatype" : "date"
+        },
+        "Currency" : {
+          "datatype" : "string",
+          "description" : "trading currency",
+          "collation" : "http://marklogic.com/collation/codepoint"
+        },
+        "OngoingCharges" : {
+          "datatype" : "string",
+          "collation" : "http://marklogic.com/collation/codepoint"
+        },
+        "ISIN" : {
+          "datatype" : "string",
+          "collation" : "http://marklogic.com/collation/codepoint"
+        },
+        "ShareClassDistributionPolicy" : {
+          "datatype" : "string",
+          "collation" : "http://marklogic.com/collation/codepoint"
+        },
+        "Description" : {
+          "datatype" : "string",
+          "collation" : "http://marklogic.com/collation/codepoint"
+        }
+      }
+    }
+  }
+}

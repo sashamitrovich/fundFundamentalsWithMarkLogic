@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+
+<lst name="responseHeader">
+  <int name="status">0</int>
+  <int name="QTime">0</int>
+  <lst name="params">
+    <str name="q">*:*</str>
+    <str name="indent">true</str>
+    <str name="rows">1000</str>
+    <str name="wt">xml</str>
+  </lst>
+</lst>
+<result name="response" numFound="14" start="0">
+  <doc>
+    <str name="id">ae18911aif398583</str>
+    <str name="managementCompany">PHITRUST PARTENAIRES</str>
+    <str name="competentAuthority">Autorité des Marchés Financiers (AMF)</str>
+    <str name="homeMemberState">FRANCE</str>
+    <str name="fundName">PHITRUST PARTENAIRES</str>
+    <str name="domicile">FRANCE</str>
+    <str name="fundHostMemberStateStor">BELGIUM, GERMANY, LUXEMBOURG, NETHERLANDS, UNITED KINGDOM</str>
+    <str name="entity_type">fund</str>
+    <str name="registrationDateStr">01/09/2014</str>
+    <str name="modificationDateStr">24/05/2016</str>
+    <long name="_version_">1599715938804957184</long>
+    <date name="timestamp">2018-05-06T12:00:04.383Z</date></doc>
+  <doc>
+    <str name="id">ae23913aif406213</str>
+    <str name="managementCompany">Big Issue Invest Fund Management Ltd</str>
+    <str name="competentAuthority">Financial Conduct Authority (FCA)</str>
+    <str name="homeMemberState">UNITED KINGDOM</str>
+    <str name="fundName">Big Issue Invest Social Enterprise Investment Fund II LP</str>
+    <str name="domicile">UNITED KINGDOM</str>
+    <str name="fundHostMemberStateStor">IRELAND, ITALY, NETHERLANDS, UNITED KINGDOM</str>
+    <str name="entity_type">fund</str>
+    <str name="registrationDateStr">16/12/2015</str>
+    <str name="modificationDateStr">28/06/2018</str>
+    <long name="_version_">1604517578399547392</long>
+    <date name="timestamp">2018-06-28T12:00:04.741Z</date></doc>
+  <doc>
+    <str name="id">ae23913aif433284</str>
+    <str name="managementCompany">Big Issue Invest Fund Management Ltd</str>
+    <str name="competentAuthority">Financial Conduct Authority (FCA)</str>
+    <str name="homeMemberState">UNITED KINGDOM</str>
+    <str name="fundName">Big Issue Invest Outcomes Investment Fund L.P.</str>
+    <str name="domicile">UNITED KINGDOM</str>
+    <str name="fundHostMemberStateStor">AUSTRIA, BELGIUM, BULGARIA, CROATIA, CYPRUS, CZECH REPUBLIC, DENMARK, ESTONIA, FINLAND, FRANCE, GERMANY, GREECE, HUNGARY, IRELAND, ITALY, LATVIA, LITHUANIA, LUXEMBOURG, MALTA, NETHERLANDS, POLAND, PORTUGAL, ROMANIA, SLOVAKIA, SLOVENIA, SPAIN, SWEDEN, UNITED KINGDOM</str>
+    <str name="entity_type">fund</str>
+    <str name="registrationDateStr">16/12/2015</str>
+    <str name="modificationDateStr">28/06/2018</str>
+    <long name="_version_">1604517578429956096</long>
+    <date name="timestamp">2018-06-28T12:00:04.771Z</date></doc>
+  <doc>
+    <str name="id">ae23887aif405894</str>
+    <str name="managementCompany">FIM Vaikuttavuussijoitukset Oy</str>
+    <str name="competentAuthority">Finanssivalvonta (FSA)</str>
+    <str name="homeMemberState">FINLAND</str>
+    <str name="fundName">Epiqus Työhyvinvointi I Ky</str>
+    <str name="domicile">FINLAND</str>
+    <str name="fundHostMemberStateStor">FINLAND</str>
+    <str name="entity_type">fund</str>
+    <str name="registrationDateStr">08/01/2016</str>
+    <str name="modificationDateStr">04/10/2019</str>
+    <long name="_version_">1646463972364255232</long>
+    <date name="timestamp">2019-10-04T12:00:03.331Z</date></doc>
+  <doc>
+    <str name="id">ae23887aif405895</str>
+    <str name="managementCompany">FIM Vaikuttavuussijoitukset Oy</str>
+    <str name="competentAuthority">Finanssivalvonta (FSA)</str>
+    <str name="homeMemberState">FINLAND</str>
+    <str name="fundName">Epiqus Kotouttaminen I Ky</str>
+    <str name="domicile">FINLAND</str>
+    <str name="fundHostMemberStateStor">FINLAND, ITALY, LUXEMBOURG, SWEDEN, UNITED KINGDOM</str>
+    <str name="entity_type">fund</str>
+    <str name="registrationDateStr">08/01/2016</str>
+    <str name="modificationDateStr">04/10/2019</str>
+    <long name="_version_">1646463972408295424</long>
+    <date name="timestamp">2019-10-04T12:00:03.374Z</date></doc>
+  <doc>
+    <str name="id">ae34160aif449488</str>
+    <str name="managementCompany">Pymwymic lnvestment Management B.V.</str>
+    <str name="competentAuthority">Netherlands Authority for the Financial Markets (AFM)</str>
+    <str name="homeMemberState">NETHERLANDS</str>
+    <str name="fundName">Pymwymic Impact Investing Coöperatief U.A.</str>
+    <str name="domicile">NETHERLANDS</str>
+    <str name="fundHostMemberStateStor">AUSTRIA, BELGIUM, DENMARK, FRANCE, GERMANY, ITALY, LUXEMBOURG, PORTUGAL, SPAIN, SWEDEN, UNITED KINGDOM</str>
+    <str name="entity_type">fund</str>
+    <str name="registrationDateStr">29/11/2018</str>
+    <str name="modificationDateStr">11/09/2019</str>
+    <long name="_version_">1644380242418073600</long>
+    <date name="timestamp">2019-09-11T12:00:03.6Z</date></doc>
+  <doc>
+    <str name="id">ae32322aif434876</str>
+    <str name="managementCompany">BIG ISSUE INVEST FUND MANAGEMENT LTD</str>
+    <str name="competentAuthority">Autorité des Marchés Financiers (AMF)</str>
+    <str name="homeMemberState">FRANCE</str>
+    <str name="fundName">BIG ISSUE INVEST OUTCOMES INVESTMENT FUND L.P</str>
+    <str name="domicile">UNITED KINGDOM</str>
+    <str name="fundHostMemberStateStor">FRANCE</str>
+    <str name="entity_type">fund</str>
+    <str name="registrationDateStr">28/06/2018</str>
+    <str name="modificationDateStr">22/08/2018</str>
+    <long name="_version_">1609538159868116992</long>
+    <date name="timestamp">2018-08-22T22:00:04.341Z</date></doc>
+  <doc>
+    <str name="id">ae33599aif436495</str>
+    <str name="managementCompany">CREAS IMPACTO, FESE, S.A.</str>
+    <str name="competentAuthority">Comisión Nacional del Mercado de Valores (CNMV)</str>
+    <str name="homeMemberState">SPAIN</str>
+    <str name="fundName">CREAS IMPACTO, FESE, S.A.</str>
+    <str name="domicile">SPAIN</str>
+    <str name="entity_type">fund</str>
+    <str name="registrationDateStr">05/10/2018</str>
+    <str name="modificationDateStr">29/10/2018</str>
+    <long name="_version_">1615664778147004416</long>
+    <date name="timestamp">2018-10-29T13:00:02.841Z</date></doc>
+  <doc>
+    <str name="id">ae37874aif452921</str>
+    <str name="managementCompany">FUCHS ASSET MANAGEMENT S.A.</str>
+    <str name="competentAuthority">Commission de Surveillance du Secteur Financier (CSSF)</str>
+    <str name="homeMemberState">LUXEMBOURG</str>
+    <str name="fundName">HURUMA FUND S.C.A., SICAR-EuSEF-HURUMA FUND I</str>
+    <str name="domicile">LUXEMBOURG</str>
+    <str name="fundHostMemberStateStor">SPAIN</str>
+    <str name="entity_type">fund</str>
+    <str name="registrationDateStr">27/08/2019</str>
+    <str name="modificationDateStr">02/01/2020</str>
+    <long name="_version_">1654621477849268224</long>
+    <date name="timestamp">2020-01-02T13:00:06.798Z</date></doc>
+  <doc>
+    <str name="id">ae39537aif456432</str>
+    <str name="managementCompany">Social Impact Ventures NL B.V.</str>
+    <str name="competentAuthority">Netherlands Authority for the Financial Markets (AFM)</str>
+    <str name="homeMemberState">NETHERLANDS</str>
+    <str name="fundName">Coöperatieve Social Impact Ventures NL Fund II U.A.</str>
+    <str name="domicile">NETHERLANDS</str>
+    <str name="fundHostMemberStateStor">AUSTRIA, BELGIUM, CYPRUS, DENMARK, FINLAND, FRANCE, GERMANY, IRELAND, ITALY, LUXEMBOURG, MALTA, PORTUGAL, SPAIN, SWEDEN, UNITED KINGDOM</str>
+    <str name="entity_type">fund</str>
+    <str name="registrationDateStr">19/03/2020</str>
+    <str name="modificationDateStr">31/03/2020</str>
+    <long name="_version_">1662680832099221504</long>
+    <date name="timestamp">2020-03-31T12:00:05.954Z</date></doc>
+  <doc>
+    <str name="id">ae14120aif370017</str>
+    <str name="managementCompany">BonVenture Management GmbH</str>
+    <str name="competentAuthority">Federal Financial Supervisory Authority (BaFin)</str>
+    <str name="homeMemberState">GERMANY</str>
+    <str name="fundName">BonVenture III GmbH &amp; Co. KG</str>
+    <str name="domicile">GERMANY</str>
+    <str name="fundHostMemberStateStor">AUSTRIA, GERMANY</str>
+    <str name="entity_type">fund</str>
+    <str name="registrationDateStr">13/05/2014</str>
+    <str name="modificationDateStr">15/04/2020</str>
+    <long name="_version_">1664039799659429888</long>
+    <date name="timestamp">2020-04-15T12:00:18.413Z</date></doc>
+  <doc>
+    <str name="id">ae14120aif370018</str>
+    <str name="managementCompany">BonVenture Management GmbH</str>
+    <str name="competentAuthority">Federal Financial Supervisory Authority (BaFin)</str>
+    <str name="homeMemberState">GERMANY</str>
+    <str name="fundName">MRI-Pilotfonds GmbH &amp; Co. KG</str>
+    <str name="domicile">GERMANY</str>
+    <str name="fundHostMemberStateStor">AUSTRIA, GERMANY</str>
+    <str name="entity_type">fund</str>
+    <str name="registrationDateStr">13/05/2014</str>
+    <str name="modificationDateStr">15/04/2020</str>
+    <long name="_version_">1664039799695081472</long>
+    <date name="timestamp">2020-04-15T12:00:18.447Z</date></doc>
+  <doc>
+    <str name="id">ae14120aif379610</str>
+    <str name="managementCompany">BonVenture Management GmbH</str>
+    <str name="competentAuthority">Federal Financial Supervisory Authority (BaFin)</str>
+    <str name="homeMemberState">GERMANY</str>
+    <str name="fundName">BonVenture II GmbH &amp; Co. KG</str>
+    <str name="domicile">GERMANY</str>
+    <str name="fundHostMemberStateStor">GERMANY</str>
+    <str name="entity_type">fund</str>
+    <str name="registrationDateStr">13/05/2014</str>
+    <str name="modificationDateStr">15/04/2020</str>
+    <long name="_version_">1664039799726538752</long>
+    <date name="timestamp">2020-04-15T12:00:18.477Z</date></doc>
+  <doc>
+    <str name="id">lastModification</str>
+    <date name="time_lastUpdate">2020-04-15T12:00:16Z</date>
+    <str name="entity_type">lastModification</str>
+    <long name="_version_">1664039799767433216</long>
+    <date name="timestamp">2020-04-15T12:00:18.516Z</date></doc>
+</result>
+</response>
