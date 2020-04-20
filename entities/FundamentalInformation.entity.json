@@ -9,9 +9,9 @@
     "FundamentalInformation" : {
       "required" : [ ],
       "pii" : [ ],
-      "elementRangeIndex" : [ "InceptionDate" ],
+      "elementRangeIndex" : [ ],
       "rangeIndex" : [ "ExchangePlace", "Currency", "ShareClassDistributionPolicy" ],
-      "wordLexicon" : [ ],
+      "wordLexicon" : [ "ExchangePlace", "Currency", "ShareClassDistributionPolicy" ],
       "properties" : {
         "FundName" : {
           "datatype" : "string",

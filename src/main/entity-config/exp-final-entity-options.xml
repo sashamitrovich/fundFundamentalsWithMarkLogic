@@ -67,14 +67,27 @@
       <search:facet-option>descending</search:facet-option>
     </search:range>
   </search:constraint>
-  <search:constraint name="InceptionDate">
-    <search:range type="xs:date" facet="true">
-      <search:element ns="" name="InceptionDate" xmlns:es="http://marklogic.com/entity-services"/>
-      <search:facet-option>limit=25</search:facet-option>
-      <search:facet-option>frequency-order</search:facet-option>
-      <search:facet-option>descending</search:facet-option>
-    </search:range>
-  </search:constraint>
+  <!--The name of this constraint is a duplicate in the generated XML. It is within a comment so that the XML may be valid, but you may need to edit for your use case.
+ <search:constraint name="ExchangePlace" xmlns:search="http://marklogic.com/appservices/search">
+  <search:word>
+    <search:element ns="" name="ExchangePlace"/>
+  </search:word>
+</search:constraint> 
+-->
+  <!--The name of this constraint is a duplicate in the generated XML. It is within a comment so that the XML may be valid, but you may need to edit for your use case.
+ <search:constraint name="Currency" xmlns:search="http://marklogic.com/appservices/search">
+  <search:word>
+    <search:element ns="" name="Currency"/>
+  </search:word>
+</search:constraint> 
+-->
+  <!--The name of this constraint is a duplicate in the generated XML. It is within a comment so that the XML may be valid, but you may need to edit for your use case.
+ <search:constraint name="ShareClassDistributionPolicy" xmlns:search="http://marklogic.com/appservices/search">
+  <search:word>
+    <search:element ns="" name="ShareClassDistributionPolicy"/>
+  </search:word>
+</search:constraint> 
+-->
   <search:tuples name="FundamentalInformation">
     <search:range type="xs:string" facet="true" collation="http://marklogic.com/collation/codepoint">
       <search:path-index xmlns:es="http://marklogic.com/entity-services">//*:instance/FundamentalInformation/ExchangePlace</search:path-index>
@@ -84,9 +97,6 @@
     </search:range>
     <search:range type="xs:string" facet="true" collation="http://marklogic.com/collation/codepoint">
       <search:path-index xmlns:es="http://marklogic.com/entity-services">//*:instance/FundamentalInformation/ShareClassDistributionPolicy</search:path-index>
-    </search:range>
-    <search:range type="xs:date" facet="true">
-      <search:element ns="" name="InceptionDate" xmlns:es="http://marklogic.com/entity-services"/>
     </search:range>
   </search:tuples>
   <!--Uncomment to return no results for a blank search, rather than the default of all results
