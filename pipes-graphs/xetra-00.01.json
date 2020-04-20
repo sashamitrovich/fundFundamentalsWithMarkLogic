@@ -185,107 +185,6 @@
       }
     },
     {
-      "label": "harmonizationInfo",
-      "collection": "harmonizationInfo",
-      "source": "Sources",
-      "fields": [
-        {
-          "label": "numHarmonized",
-          "children": [],
-          "field": "numHarmonized",
-          "path": "//numHarmonized",
-          "type": "custom"
-        },
-        {
-          "label": "source",
-          "children": [],
-          "field": "source",
-          "path": "//source",
-          "type": "custom"
-        },
-        {
-          "label": "sourceUri",
-          "children": [],
-          "field": "sourceUri",
-          "path": "//sourceUri",
-          "type": "custom"
-        },
-        {
-          "label": "missingSource",
-          "children": [],
-          "field": "missingSource",
-          "path": "//missingSource",
-          "type": "custom"
-        }
-      ],
-      "options": [
-        "nodeOutput",
-        "fieldsInputs"
-      ],
-      "metadata": {
-        "description": "",
-        "dateCreated": "2020-04-17T09:01:44.172Z",
-        "blockCreatedFrom": "none",
-        "sourceDHFStep": null,
-        "sourceDatabase": "",
-        "sourceCollection": "",
-        "customURIs": ""
-      }
-    },
-    {
-      "label": "test",
-      "collection": "test",
-      "source": "Sources",
-      "fields": [
-        {
-          "label": "BENCHMARK [id26]",
-          "field": "BENCHMARK",
-          "value": "BENCHMARK",
-          "path": "/envelope/instance/BENCHMARK",
-          "originalPath": "/envelope/instance/text('BENCHMARK')",
-          "type": 3,
-          "children": [],
-          "parent": "/envelope/instance"
-        },
-        {
-          "label": "BLOOMBERG TICKER [id15]",
-          "field": "BLOOMBERG TICKER",
-          "value": "BLOOMBERG TICKER",
-          "path": "/envelope/instance/node('BLOOMBERG TICKER')",
-          "originalPath": "/envelope/instance/text('BLOOMBERG TICKER')",
-          "type": 3,
-          "children": [],
-          "parent": "/envelope/instance"
-        },
-        {
-          "label": "ETF TYPE [id9]",
-          "field": "ETF TYPE",
-          "value": "ETF TYPE",
-          "path": "/envelope/instance/node('ETF TYPE')",
-          "originalPath": "/envelope/instance/text('ETF TYPE')",
-          "type": 3,
-          "children": [],
-          "parent": "/envelope/instance"
-        }
-      ],
-      "options": [
-        "nodeInput",
-        "fieldsOutputs"
-      ],
-      "metadata": {
-        "description": "",
-        "dateCreated": "2020-04-17T11:08:13.747Z",
-        "blockCreatedFrom": "custom_step",
-        "sourceDHFStep": {
-          "label": "xetra-harmonize",
-          "value": "xetra-harmonize"
-        },
-        "sourceDatabase": "funds-data-hub-STAGING",
-        "sourceCollection": "xetra-source",
-        "customURIs": ""
-      }
-    },
-    {
       "label": "xetra-source",
       "collection": "xetra-source",
       "source": "Sources",
@@ -506,7 +405,7 @@
   ],
   "executionGraph": {
     "last_node_id": 21,
-    "last_link_id": 55,
+    "last_link_id": 56,
     "nodes": [
       {
         "id": 2,
@@ -564,7 +463,7 @@
           {
             "name": "attachments",
             "type": 0,
-            "link": null
+            "link": 56
           },
           {
             "name": "uri",
@@ -592,43 +491,6 @@
         ]
       },
       {
-        "id": 1,
-        "type": "dhf/input",
-        "pos": [
-          -236,
-          475
-        ],
-        "size": [
-          180,
-          60
-        ],
-        "flags": {},
-        "order": 0,
-        "mode": 0,
-        "outputs": [
-          {
-            "name": "input",
-            "type": "",
-            "links": [
-              4
-            ]
-          },
-          {
-            "name": "uri",
-            "type": "",
-            "links": [
-              37
-            ]
-          },
-          {
-            "name": "collections",
-            "type": "",
-            "links": null
-          }
-        ],
-        "properties": {}
-      },
-      {
         "id": 13,
         "type": "basic/const",
         "pos": [
@@ -640,7 +502,7 @@
           "1": 26
         },
         "flags": {},
-        "order": 1,
+        "order": 0,
         "mode": 0,
         "outputs": [
           {
@@ -713,7 +575,7 @@
           410
         ],
         "size": [
-          328.79998779296875,
+          328.799987792969,
           248
         ],
         "flags": {},
@@ -797,7 +659,7 @@
           "1": 58
         },
         "flags": {},
-        "order": 2,
+        "order": 1,
         "mode": 0,
         "outputs": [
           {
@@ -824,7 +686,7 @@
           "1": 58
         },
         "flags": {},
-        "order": 3,
+        "order": 2,
         "mode": 0,
         "outputs": [
           {
@@ -1078,7 +940,7 @@
           "1": 58
         },
         "flags": {},
-        "order": 4,
+        "order": 3,
         "mode": 0,
         "outputs": [
           {
@@ -1140,6 +1002,44 @@
           "",
           "/fund/${v2}/${v1}.json"
         ]
+      },
+      {
+        "id": 1,
+        "type": "dhf/input",
+        "pos": [
+          -236,
+          475
+        ],
+        "size": [
+          180,
+          60
+        ],
+        "flags": {},
+        "order": 4,
+        "mode": 0,
+        "outputs": [
+          {
+            "name": "input",
+            "type": "",
+            "links": [
+              4,
+              56
+            ]
+          },
+          {
+            "name": "uri",
+            "type": "",
+            "links": [
+              37
+            ]
+          },
+          {
+            "name": "collections",
+            "type": "",
+            "links": null
+          }
+        ],
+        "properties": {}
       }
     ],
     "links": [
@@ -1326,6 +1226,14 @@
         20,
         1,
         0
+      ],
+      [
+        56,
+        1,
+        0,
+        4,
+        3,
+        0
       ]
     ],
     "groups": [],
@@ -1334,9 +1242,9 @@
   },
   "name": "xetra",
   "metadata": {
-    "title": "xetra",
     "version": "00.01",
     "author": "",
-    "description": ""
+    "title": "xetra",
+    "dateExported": "20/04/2020, 08:03:47"
   }
 }
