@@ -1,0 +1,7 @@
+{
+    "collection-name": "temporal-collection",
+    "system-axis": "system",
+    "option": [
+        "updates-safe"
+    ]
+}
