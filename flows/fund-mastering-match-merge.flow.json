@@ -1,5 +1,5 @@
 {
-  "name" : "funds-mastering",
+  "name" : "fund-mastering-match-merge",
   "description" : "",
   "batchSize" : 100,
   "threadCount" : 4,
@@ -8,56 +8,16 @@
   "version" : 0,
   "steps" : {
     "1" : {
-      "name" : "combine-master",
+      "name" : "match-fund-fundamental-data",
       "description" : "",
       "options" : {
-        "stepUpdate" : true,
+        "stepUpdate" : false,
         "additionalCollections" : [ ],
         "sourceQuery" : "cts.collectionQuery([\"FundamentalInformation\"])",
         "acceptsBatch" : true,
         "targetEntity" : "FundamentalInformation",
-        "sourceCollection" : "FundamentalInformation",
-        "targetDatabase" : "funds-data-hub-FINAL",
         "sourceDatabase" : "funds-data-hub-FINAL",
-        "collections" : [ "combine-master", "FundamentalInformation" ],
-        "mergeOptions" : {
-          "matchOptions" : "",
-          "propertyDefs" : {
-            "properties" : [ {
-              "localname" : "FundName",
-              "name" : "FundName"
-            }, {
-              "localname" : "ISIN",
-              "name" : "ISIN"
-            }, {
-              "localname" : "BloombergSymbol",
-              "name" : "BloombergSymbol"
-            } ],
-            "namespaces" : { }
-          },
-          "algorithms" : {
-            "stdAlgorithm" : {
-              "timestamp" : { }
-            },
-            "custom" : [ ],
-            "collections" : { }
-          },
-          "mergeStrategies" : [ ],
-          "merging" : [ {
-            "propertyName" : "FundName",
-            "sourceWeights" : [ ]
-          }, {
-            "propertyName" : "ISIN",
-            "sourceWeights" : [ ]
-          }, {
-            "propertyName" : "BloombergSymbol",
-            "sourceWeights" : [ ]
-          }, {
-            "algorithmRef" : "standard",
-            "sourceWeights" : [ ],
-            "default" : true
-          } ]
-        },
+        "collections" : [ "match-fund-fundamental-data", "FundamentalInformation" ],
         "permissions" : "data-hub-operator,read,data-hub-operator,update",
         "matchOptions" : {
           "propertyDefs" : {
@@ -116,11 +76,11 @@
           "thresholds" : {
             "threshold" : [ {
               "above" : "15",
-              "label" : "will merge",
+              "label" : "will-merge",
               "action" : "merge"
             }, {
               "above" : "5",
-              "label" : "will notify",
+              "label" : "will-notify",
               "action" : "notify"
             } ]
           },
@@ -128,7 +88,75 @@
             "maxScan" : 200
           }
         },
-        "outputFormat" : "json"
+        "sourceCollection" : "FundamentalInformation",
+        "outputFormat" : "json",
+        "targetDatabase" : "funds-data-hub-FINAL"
+      },
+      "customHook" : {
+        "module" : "",
+        "parameters" : { },
+        "user" : "",
+        "runBefore" : false
+      },
+      "retryLimit" : 0,
+      "batchSize" : 100,
+      "threadCount" : 4,
+      "stepDefinitionName" : "default-matching",
+      "stepDefinitionType" : "MATCHING"
+    },
+    "2" : {
+      "name" : "merge-fund-fundamental-data",
+      "description" : "",
+      "options" : {
+        "stepUpdate" : false,
+        "additionalCollections" : [ ],
+        "sourceQuery" : "cts.collectionQuery([\"FundamentalInformation\"])",
+        "acceptsBatch" : false,
+        "targetEntity" : "FundamentalInformation",
+        "sourceDatabase" : "funds-data-hub-FINAL",
+        "collections" : [ "merge-fund-fundamental-data", "FundamentalInformation" ],
+        "mergeOptions" : {
+          "matchOptions" : "",
+          "propertyDefs" : {
+            "properties" : [ {
+              "localname" : "FundName",
+              "name" : "FundName"
+            }, {
+              "localname" : "ISIN",
+              "name" : "ISIN"
+            }, {
+              "localname" : "BloombergSymbol",
+              "name" : "BloombergSymbol"
+            } ],
+            "namespaces" : { }
+          },
+          "algorithms" : {
+            "stdAlgorithm" : {
+              "timestamp" : { }
+            },
+            "custom" : [ ],
+            "collections" : { }
+          },
+          "mergeStrategies" : [ ],
+          "merging" : [ {
+            "propertyName" : "FundName",
+            "sourceWeights" : [ ]
+          }, {
+            "propertyName" : "ISIN",
+            "sourceWeights" : [ ]
+          }, {
+            "propertyName" : "BloombergSymbol",
+            "sourceWeights" : [ ]
+          }, {
+            "algorithmRef" : "standard",
+            "sourceWeights" : [ ],
+            "default" : true
+          } ]
+        },
+        "permissions" : "data-hub-operator,read,data-hub-operator,update",
+        "sourceCollection" : "FundamentalInformation",
+        "outputFormat" : "json",
+        "targetDatabase" : "funds-data-hub-FINAL"
       },
       "customHook" : {
         "module" : "",
@@ -138,9 +166,9 @@
       },
       "retryLimit" : null,
       "batchSize" : 100,
-      "threadCount" : 8,
-      "stepDefinitionName" : "default-mastering",
-      "stepDefinitionType" : "MASTERING"
+      "threadCount" : 4,
+      "stepDefinitionName" : "default-merging",
+      "stepDefinitionType" : "MERGING"
     }
   }
 }
