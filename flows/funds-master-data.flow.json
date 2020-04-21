@@ -116,6 +116,37 @@
       }
     },
     "4" : {
+      "name" : "xetra-mapping",
+      "description" : "",
+      "options" : {
+        "additionalCollections" : [ ],
+        "sourceQuery" : "cts.collectionQuery([\"xetra-source\"])",
+        "mapping" : {
+          "name" : "funds-master-data-xetra-mapping",
+          "version" : 0
+        },
+        "targetEntity" : "FundamentalInformation",
+        "sourceDatabase" : "funds-data-hub-STAGING",
+        "collections" : [ "xetra-mapping" ],
+        "permissions" : "data-hub-operator,read,data-hub-operator,update",
+        "validateEntity" : false,
+        "sourceCollection" : "xetra-source",
+        "outputFormat" : "json",
+        "targetDatabase" : "funds-data-hub-FINAL"
+      },
+      "customHook" : {
+        "module" : "",
+        "parameters" : { },
+        "user" : "",
+        "runBefore" : false
+      },
+      "retryLimit" : null,
+      "batchSize" : 100,
+      "threadCount" : 4,
+      "stepDefinitionName" : "entity-services-mapping",
+      "stepDefinitionType" : "MAPPING"
+    },
+    "5" : {
       "name" : "harmonize-masterdatareports",
       "description" : "",
       "options" : {
@@ -141,7 +172,7 @@
       "stepDefinitionName" : "harmonize-masterdatareports",
       "stepDefinitionType" : "CUSTOM"
     },
-    "5" : {
+    "6" : {
       "name" : "harmonize-openfunds",
       "description" : "",
       "options" : {
@@ -167,7 +198,7 @@
       "stepDefinitionName" : "harmonize-openfunds",
       "stepDefinitionType" : "CUSTOM"
     },
-    "6" : {
+    "7" : {
       "name" : "xetra-harmonize",
       "description" : "",
       "options" : {

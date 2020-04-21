@@ -1,0 +1,36 @@
+{
+  "lang" : "zxx",
+  "name" : "funds-master-data-xetra-mapping",
+  "description" : "",
+  "version" : 0,
+  "targetEntityType" : "http://example.org/FundamentalInformation-0.0.1/FundamentalInformation",
+  "sourceContext" : "/",
+  "sourceURI" : "/Users/smitrovi/MarkLogic/dev/fonds-demo/source/xetra/13414025-3e00-402d-8d09-a1750a3e17dd.json",
+  "properties" : {
+    "OngoingCharges" : {
+      "sourcedFrom" : "*[local-name(.)='ONGOING CHARGES']"
+    },
+    "Description" : {
+      "sourcedFrom" : "*[local-name(.)='HOMEPAGE ISSUER']"
+    },
+    "ExchangePlace" : {
+      "sourcedFrom" : "string(\"Xetra\")"
+    },
+    "FundName" : {
+      "sourcedFrom" : "ISIN"
+    },
+    "Currency" : {
+      "sourcedFrom" : "*[local-name(.)='TRADING CURRENCY']"
+    },
+    "ShareClassDistributionPolicy" : {
+      "sourcedFrom" : "*[local-name(.)='USE OF PROFITS']"
+    },
+    "ISIN" : {
+      "sourcedFrom" : "ISIN"
+    },
+    "BloombergSymbol" : {
+      "sourcedFrom" : "*[local-name(.)='BLOOMBERG TICKER']"
+    }
+  },
+  "namespaces" : { }
+}

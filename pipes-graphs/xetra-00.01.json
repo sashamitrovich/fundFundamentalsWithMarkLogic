@@ -185,6 +185,107 @@
       }
     },
     {
+      "label": "harmonizationInfo",
+      "collection": "harmonizationInfo",
+      "source": "Sources",
+      "fields": [
+        {
+          "label": "numHarmonized",
+          "children": [],
+          "field": "numHarmonized",
+          "path": "//numHarmonized",
+          "type": "custom"
+        },
+        {
+          "label": "source",
+          "children": [],
+          "field": "source",
+          "path": "//source",
+          "type": "custom"
+        },
+        {
+          "label": "sourceUri",
+          "children": [],
+          "field": "sourceUri",
+          "path": "//sourceUri",
+          "type": "custom"
+        },
+        {
+          "label": "missingSource",
+          "children": [],
+          "field": "missingSource",
+          "path": "//missingSource",
+          "type": "custom"
+        }
+      ],
+      "options": [
+        "nodeOutput",
+        "fieldsInputs"
+      ],
+      "metadata": {
+        "description": "",
+        "dateCreated": "2020-04-17T09:01:44.172Z",
+        "blockCreatedFrom": "none",
+        "sourceDHFStep": null,
+        "sourceDatabase": "",
+        "sourceCollection": "",
+        "customURIs": ""
+      }
+    },
+    {
+      "label": "test",
+      "collection": "test",
+      "source": "Sources",
+      "fields": [
+        {
+          "label": "BENCHMARK [id26]",
+          "field": "BENCHMARK",
+          "value": "BENCHMARK",
+          "path": "/envelope/instance/BENCHMARK",
+          "originalPath": "/envelope/instance/text('BENCHMARK')",
+          "type": 3,
+          "children": [],
+          "parent": "/envelope/instance"
+        },
+        {
+          "label": "BLOOMBERG TICKER [id15]",
+          "field": "BLOOMBERG TICKER",
+          "value": "BLOOMBERG TICKER",
+          "path": "/envelope/instance/node('BLOOMBERG TICKER')",
+          "originalPath": "/envelope/instance/text('BLOOMBERG TICKER')",
+          "type": 3,
+          "children": [],
+          "parent": "/envelope/instance"
+        },
+        {
+          "label": "ETF TYPE [id9]",
+          "field": "ETF TYPE",
+          "value": "ETF TYPE",
+          "path": "/envelope/instance/node('ETF TYPE')",
+          "originalPath": "/envelope/instance/text('ETF TYPE')",
+          "type": 3,
+          "children": [],
+          "parent": "/envelope/instance"
+        }
+      ],
+      "options": [
+        "nodeInput",
+        "fieldsOutputs"
+      ],
+      "metadata": {
+        "description": "",
+        "dateCreated": "2020-04-17T11:08:13.747Z",
+        "blockCreatedFrom": "custom_step",
+        "sourceDHFStep": {
+          "label": "xetra-harmonize",
+          "value": "xetra-harmonize"
+        },
+        "sourceDatabase": "funds-data-hub-STAGING",
+        "sourceCollection": "xetra-source",
+        "customURIs": ""
+      }
+    },
+    {
       "label": "xetra-source",
       "collection": "xetra-source",
       "source": "Sources",
@@ -264,54 +365,6 @@
         },
         "sourceDatabase": "funds-data-hub-STAGING",
         "sourceCollection": "xetra-source",
-        "customURIs": ""
-      }
-    },
-    {
-      "label": "lineage",
-      "collection": "lineage",
-      "source": "Sources",
-      "fields": [
-        {
-          "label": "numHarmonized",
-          "children": [],
-          "field": "numHarmonized",
-          "path": "//numHarmonized",
-          "type": "custom"
-        },
-        {
-          "label": "source",
-          "children": [],
-          "field": "source",
-          "path": "//source",
-          "type": "custom"
-        },
-        {
-          "label": "sourceUri",
-          "children": [],
-          "field": "sourceUri",
-          "path": "//sourceUri",
-          "type": "custom"
-        },
-        {
-          "label": "missingSourceFor",
-          "children": [],
-          "field": "missingSourceFor",
-          "path": "//missingSourceFor",
-          "type": "custom"
-        }
-      ],
-      "options": [
-        "nodeOutput",
-        "fieldsInputs"
-      ],
-      "metadata": {
-        "description": "",
-        "dateCreated": "2020-04-17T12:07:49.977Z",
-        "blockCreatedFrom": "none",
-        "sourceDHFStep": null,
-        "sourceDatabase": "",
-        "sourceCollection": "",
         "customURIs": ""
       }
     },
@@ -401,11 +454,156 @@
         "fieldsInputs",
         "nodeOutput"
       ]
+    },
+    {
+      "label": "lineage",
+      "collection": "lineage",
+      "source": "Sources",
+      "fields": [
+        {
+          "label": "numHarmonized",
+          "children": [],
+          "field": "numHarmonized",
+          "path": "//numHarmonized",
+          "type": "custom"
+        },
+        {
+          "label": "source",
+          "children": [],
+          "field": "source",
+          "path": "//source",
+          "type": "custom"
+        },
+        {
+          "label": "sourceUri",
+          "children": [],
+          "field": "sourceUri",
+          "path": "//sourceUri",
+          "type": "custom"
+        },
+        {
+          "label": "missingSourceFor",
+          "children": [],
+          "field": "missingSourceFor",
+          "path": "//missingSourceFor",
+          "type": "custom"
+        },
+        {
+          "label": "systemStart",
+          "children": [],
+          "field": "systemStart",
+          "path": "//systemStart",
+          "type": "custom"
+        },
+        {
+          "label": "systemEnd",
+          "children": [],
+          "field": "systemEnd",
+          "path": "//systemEnd",
+          "type": "custom"
+        }
+      ],
+      "options": [
+        "fieldsInputs",
+        "nodeOutput"
+      ],
+      "metadata": {
+        "description": "",
+        "dateCreated": "2020-04-20T12:46:35.902Z",
+        "blockCreatedFrom": "none",
+        "sourceDHFStep": null,
+        "sourceDatabase": "",
+        "sourceCollection": "",
+        "customURIs": ""
+      }
+    },
+    {
+      "label": "xetra-source-v1.1",
+      "collection": "xetra-source-v1.1",
+      "source": "Sources",
+      "fields": [
+        {
+          "label": "BLOOMBERG TICKER [id15]",
+          "field": "BLOOMBERG TICKER",
+          "value": "BLOOMBERG TICKER",
+          "path": "/envelope/instance/node('BLOOMBERG TICKER')",
+          "originalPath": "/envelope/instance/text('BLOOMBERG TICKER')",
+          "type": 3,
+          "children": [],
+          "parent": "/envelope/instance"
+        },
+        {
+          "label": "FUND CURRENCY [id20]",
+          "field": "FUND CURRENCY",
+          "value": "FUND CURRENCY",
+          "path": "/envelope/instance/node('FUND CURRENCY')",
+          "originalPath": "/envelope/instance/text('FUND CURRENCY')",
+          "type": 3,
+          "children": [],
+          "parent": "/envelope/instance"
+        },
+        {
+          "label": "ONGOING CHARGES [id17]",
+          "field": "ONGOING CHARGES",
+          "value": "ONGOING CHARGES",
+          "path": "/envelope/instance/node('ONGOING CHARGES')",
+          "originalPath": "/envelope/instance/text('ONGOING CHARGES')",
+          "type": 3,
+          "children": [],
+          "parent": "/envelope/instance"
+        },
+        {
+          "label": "ISIN [id11]",
+          "field": "ISIN",
+          "value": "ISIN",
+          "path": "/envelope/instance/ISIN",
+          "originalPath": "/envelope/instance/text('ISIN')",
+          "type": 3,
+          "children": [],
+          "parent": "/envelope/instance"
+        },
+        {
+          "label": "EXCHANGE TRADED FUNDS NAME [id10]",
+          "field": "EXCHANGE TRADED FUNDS NAME",
+          "value": "EXCHANGE TRADED FUNDS NAME",
+          "path": "/envelope/instance/node('EXCHANGE TRADED FUNDS NAME')",
+          "originalPath": "/envelope/instance/text('EXCHANGE TRADED FUNDS NAME')",
+          "type": 3,
+          "children": [],
+          "parent": "/envelope/instance"
+        },
+        {
+          "label": "USE OF PROFITS [id18]",
+          "field": "USE OF PROFITS",
+          "value": "USE OF PROFITS",
+          "path": "/envelope/instance/node('USE OF PROFITS')",
+          "originalPath": "/envelope/instance/text('USE OF PROFITS')",
+          "type": 3,
+          "children": [],
+          "parent": "/envelope/instance"
+        }
+      ],
+      "options": [
+        "nodeInput",
+        "fieldsOutputs"
+      ],
+      "metadata": {
+        "description": "",
+        "dateCreated": "2020-04-21T06:13:56.739Z",
+        "blockCreatedFrom": "custom_step",
+        "sourceDHFStep": {
+          "label": "xetra-harmonize",
+          "value": "xetra-harmonize"
+        },
+        "sourceDatabase": "funds-data-hub-STAGING",
+        "sourceCollection": "xetra-source",
+        "customURIs": ""
+      }
     }
   ],
   "executionGraph": {
-    "last_node_id": 21,
-    "last_link_id": 56,
+    "last_node_id": 28,
+    "last_link_id": 76,
     "nodes": [
       {
         "id": 2,
@@ -419,7 +617,7 @@
           160
         ],
         "flags": {},
-        "order": 13,
+        "order": 16,
         "mode": 0,
         "inputs": [
           {
@@ -442,13 +640,13 @@
           160
         ],
         "flags": {},
-        "order": 12,
+        "order": 15,
         "mode": 0,
         "inputs": [
           {
             "name": "headers",
             "type": 0,
-            "link": 41
+            "link": 61
           },
           {
             "name": "triples",
@@ -491,83 +689,6 @@
         ]
       },
       {
-        "id": 13,
-        "type": "basic/const",
-        "pos": [
-          543,
-          784
-        ],
-        "size": {
-          "0": 170,
-          "1": 26
-        },
-        "flags": {},
-        "order": 0,
-        "mode": 0,
-        "outputs": [
-          {
-            "name": "value",
-            "links": [
-              39
-            ]
-          }
-        ],
-        "properties": {
-          "value": "7"
-        }
-      },
-      {
-        "id": 9,
-        "type": "basic/Array",
-        "pos": [
-          552,
-          963
-        ],
-        "size": {
-          "0": 170,
-          "1": 106
-        },
-        "flags": {},
-        "order": 9,
-        "mode": 0,
-        "inputs": [
-          {
-            "name": "item1",
-            "type": 0,
-            "link": 14
-          },
-          {
-            "name": "item2",
-            "type": 0,
-            "link": 16
-          },
-          {
-            "name": "item3",
-            "type": 0,
-            "link": 34
-          },
-          {
-            "name": "item4",
-            "type": 0,
-            "link": null
-          },
-          {
-            "name": "item5",
-            "type": 0,
-            "link": null
-          }
-        ],
-        "outputs": [
-          {
-            "name": "array",
-            "links": [
-              40
-            ]
-          }
-        ],
-        "properties": {}
-      },
-      {
         "id": 19,
         "type": "Entities/FundamentalInformation",
         "pos": [
@@ -579,18 +700,18 @@
           248
         ],
         "flags": {},
-        "order": 10,
+        "order": 13,
         "mode": 0,
         "inputs": [
           {
             "name": "BloombergSymbol",
             "type": 0,
-            "link": 42
+            "link": 66
           },
           {
             "name": "Currency",
             "type": 0,
-            "link": 43
+            "link": 67
           },
           {
             "name": "Description",
@@ -605,12 +726,12 @@
           {
             "name": "FundName",
             "type": 0,
-            "link": 45
+            "link": 70
           },
           {
             "name": "ISIN",
             "type": 0,
-            "link": 50
+            "link": 69
           },
           {
             "name": "InceptionDate",
@@ -620,12 +741,12 @@
           {
             "name": "OngoingCharges",
             "type": 0,
-            "link": 54
+            "link": 74
           },
           {
             "name": "ShareClassDistributionPolicy",
             "type": 0,
-            "link": 47
+            "link": 76
           }
         ],
         "outputs": [
@@ -659,7 +780,7 @@
           "1": 58
         },
         "flags": {},
-        "order": 1,
+        "order": 0,
         "mode": 0,
         "outputs": [
           {
@@ -675,33 +796,6 @@
         ]
       },
       {
-        "id": 10,
-        "type": "string/constant",
-        "pos": [
-          142,
-          827
-        ],
-        "size": {
-          "0": 255,
-          "1": 58
-        },
-        "flags": {},
-        "order": 2,
-        "mode": 0,
-        "outputs": [
-          {
-            "name": "value",
-            "links": [
-              14
-            ]
-          }
-        ],
-        "properties": {},
-        "widgets_values": [
-          "InceptionDate"
-        ]
-      },
-      {
         "id": 8,
         "type": "string/Map values",
         "pos": [
@@ -713,13 +807,13 @@
           "1": 102
         },
         "flags": {},
-        "order": 6,
+        "order": 10,
         "mode": 0,
         "inputs": [
           {
             "name": "value",
             "type": 0,
-            "link": 15
+            "link": 71
           },
           {
             "name": "default",
@@ -755,209 +849,6 @@
         ]
       },
       {
-        "id": 6,
-        "type": "Sources/xetra-source",
-        "pos": [
-          59,
-          406
-        ],
-        "size": [
-          312,
-          188
-        ],
-        "flags": {},
-        "order": 5,
-        "mode": 0,
-        "inputs": [
-          {
-            "name": "Node",
-            "type": 0,
-            "link": 4
-          }
-        ],
-        "outputs": [
-          {
-            "name": "BLOOMBERG TICKER",
-            "links": [
-              42
-            ]
-          },
-          {
-            "name": "FUND CURRENCY",
-            "links": [
-              43
-            ]
-          },
-          {
-            "name": "REPLICATION METHOD",
-            "links": [
-              15,
-              47
-            ]
-          },
-          {
-            "name": "ONGOING CHARGES",
-            "links": [
-              53
-            ]
-          },
-          {
-            "name": "ISIN",
-            "links": [
-              50,
-              51
-            ]
-          },
-          {
-            "name": "EXCHANGE TRADED FUNDS NAME",
-            "links": [
-              45
-            ]
-          }
-        ],
-        "properties": {},
-        "widgets_values": [
-          true
-        ]
-      },
-      {
-        "id": 21,
-        "type": "string/Map values",
-        "pos": [
-          245,
-          1165
-        ],
-        "size": {
-          "0": 255,
-          "1": 102
-        },
-        "flags": {},
-        "order": 7,
-        "mode": 0,
-        "inputs": [
-          {
-            "name": "value",
-            "type": 0,
-            "link": 53
-          },
-          {
-            "name": "default",
-            "type": 0,
-            "link": null
-          }
-        ],
-        "outputs": [
-          {
-            "name": "mappedValue",
-            "links": [
-              54
-            ]
-          }
-        ],
-        "title": "OngoingCharges",
-        "properties": {
-          "mapping": [
-            {
-              "source": "#NULL#",
-              "target": "OngoingCharges"
-            },
-            {
-              "source": "#EMPTY#",
-              "target": "OngoingCharges"
-            }
-          ],
-          "hoverText": "Double click block to edit the mapping rules"
-        },
-        "widgets_values": [
-          "string",
-          false
-        ]
-      },
-      {
-        "id": 18,
-        "type": "Sources/lineage",
-        "pos": [
-          1078,
-          868
-        ],
-        "size": [
-          305,
-          148
-        ],
-        "flags": {},
-        "order": 11,
-        "mode": 0,
-        "inputs": [
-          {
-            "name": "numHarmonized",
-            "type": 0,
-            "link": 39
-          },
-          {
-            "name": "source",
-            "type": 0,
-            "link": 38
-          },
-          {
-            "name": "sourceUri",
-            "type": 0,
-            "link": 37
-          },
-          {
-            "name": "missingSourceFor",
-            "type": 0,
-            "link": 40
-          }
-        ],
-        "outputs": [
-          {
-            "name": "Node",
-            "type": "Node",
-            "links": [
-              41
-            ]
-          },
-          {
-            "name": "Prov",
-            "type": null,
-            "links": null
-          }
-        ],
-        "properties": {},
-        "widgets_values": [
-          false
-        ]
-      },
-      {
-        "id": 7,
-        "type": "string/constant",
-        "pos": [
-          439,
-          670
-        ],
-        "size": {
-          "0": 255,
-          "1": 58
-        },
-        "flags": {},
-        "order": 3,
-        "mode": 0,
-        "outputs": [
-          {
-            "name": "value",
-            "links": [
-              38,
-              48,
-              55
-            ]
-          }
-        ],
-        "properties": {},
-        "widgets_values": [
-          "XETRA"
-        ]
-      },
-      {
         "id": 20,
         "type": "string/Templating",
         "pos": [
@@ -969,13 +860,13 @@
           "1": 146
         },
         "flags": {},
-        "order": 8,
+        "order": 7,
         "mode": 0,
         "inputs": [
           {
             "name": "v1",
             "type": 0,
-            "link": 51
+            "link": 64
           },
           {
             "name": "v2",
@@ -1004,6 +895,260 @@
         ]
       },
       {
+        "id": 13,
+        "type": "basic/const",
+        "pos": [
+          543,
+          784
+        ],
+        "size": {
+          "0": 170,
+          "1": 26
+        },
+        "flags": {},
+        "order": 1,
+        "mode": 0,
+        "outputs": [
+          {
+            "name": "value",
+            "links": [
+              57
+            ]
+          }
+        ],
+        "properties": {
+          "value": "7"
+        }
+      },
+      {
+        "id": 9,
+        "type": "basic/Array",
+        "pos": [
+          591,
+          965
+        ],
+        "size": {
+          "0": 170,
+          "1": 106
+        },
+        "flags": {},
+        "order": 12,
+        "mode": 0,
+        "inputs": [
+          {
+            "name": "item1",
+            "type": 0,
+            "link": 14
+          },
+          {
+            "name": "item2",
+            "type": 0,
+            "link": 16
+          },
+          {
+            "name": "item3",
+            "type": 0,
+            "link": 34
+          },
+          {
+            "name": "item4",
+            "type": 0,
+            "link": 73
+          },
+          {
+            "name": "item5",
+            "type": 0,
+            "link": null
+          }
+        ],
+        "outputs": [
+          {
+            "name": "array",
+            "links": [
+              58
+            ]
+          }
+        ],
+        "properties": {}
+      },
+      {
+        "id": 10,
+        "type": "string/constant",
+        "pos": [
+          271,
+          844
+        ],
+        "size": {
+          "0": 255,
+          "1": 58
+        },
+        "flags": {},
+        "order": 2,
+        "mode": 0,
+        "outputs": [
+          {
+            "name": "value",
+            "links": [
+              14
+            ]
+          }
+        ],
+        "properties": {},
+        "widgets_values": [
+          "InceptionDate"
+        ]
+      },
+      {
+        "id": 7,
+        "type": "string/constant",
+        "pos": [
+          439,
+          670
+        ],
+        "size": {
+          "0": 255,
+          "1": 58
+        },
+        "flags": {},
+        "order": 3,
+        "mode": 0,
+        "outputs": [
+          {
+            "name": "value",
+            "links": [
+              48,
+              55,
+              60
+            ]
+          }
+        ],
+        "properties": {},
+        "widgets_values": [
+          "XETRA"
+        ]
+      },
+      {
+        "id": 23,
+        "type": "Sources/lineage",
+        "pos": [
+          972.0691832424296,
+          752.9529837055554
+        ],
+        "size": [
+          305,
+          188
+        ],
+        "flags": {},
+        "order": 14,
+        "mode": 0,
+        "inputs": [
+          {
+            "name": "numHarmonized",
+            "type": 0,
+            "link": 57
+          },
+          {
+            "name": "source",
+            "type": 0,
+            "link": 60
+          },
+          {
+            "name": "sourceUri",
+            "type": 0,
+            "link": 59
+          },
+          {
+            "name": "missingSourceFor",
+            "type": 0,
+            "link": 58
+          },
+          {
+            "name": "systemStart",
+            "type": 0,
+            "link": 62
+          },
+          {
+            "name": "systemEnd",
+            "type": 0,
+            "link": 63
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Node",
+            "type": "Node",
+            "links": [
+              61
+            ]
+          },
+          {
+            "name": "Prov",
+            "type": null,
+            "links": null
+          }
+        ],
+        "properties": {},
+        "widgets_values": [
+          true
+        ]
+      },
+      {
+        "id": 25,
+        "type": "string/constant",
+        "pos": [
+          779,
+          1122
+        ],
+        "size": {
+          "0": 255,
+          "1": 58
+        },
+        "flags": {},
+        "order": 4,
+        "mode": 0,
+        "outputs": [
+          {
+            "name": "value",
+            "links": [
+              62,
+              63
+            ]
+          }
+        ],
+        "title": "empty",
+        "properties": {},
+        "widgets_values": [
+          ""
+        ]
+      },
+      {
+        "id": 26,
+        "type": "string/uuid",
+        "pos": [
+          545.4852936027983,
+          152.8145134760651
+        ],
+        "size": {
+          "0": 255,
+          "1": 58
+        },
+        "flags": {},
+        "order": 5,
+        "mode": 0,
+        "outputs": [
+          {
+            "name": "uuid",
+            "links": [
+              64
+            ]
+          }
+        ],
+        "properties": {},
+        "widgets_values": [
+          ""
+        ]
+      },
+      {
         "id": 1,
         "type": "dhf/input",
         "pos": [
@@ -1015,28 +1160,178 @@
           60
         ],
         "flags": {},
-        "order": 4,
+        "order": 6,
         "mode": 0,
         "outputs": [
           {
             "name": "input",
             "type": "",
             "links": [
-              4,
-              56
+              56,
+              65
             ]
           },
           {
             "name": "uri",
             "type": "",
             "links": [
-              37
+              59
             ]
           },
           {
             "name": "collections",
             "type": "",
             "links": null
+          }
+        ],
+        "properties": {}
+      },
+      {
+        "id": 21,
+        "type": "string/Map values",
+        "pos": [
+          245,
+          1165
+        ],
+        "size": {
+          "0": 255,
+          "1": 102
+        },
+        "flags": {},
+        "order": 9,
+        "mode": 0,
+        "inputs": [
+          {
+            "name": "value",
+            "type": 0,
+            "link": 72
+          },
+          {
+            "name": "default",
+            "type": 0,
+            "link": null
+          }
+        ],
+        "outputs": [
+          {
+            "name": "mappedValue",
+            "links": [
+              73
+            ]
+          }
+        ],
+        "title": "OngoingCharges",
+        "properties": {
+          "mapping": [
+            {
+              "source": "#NULL#",
+              "target": "OngoingCharges"
+            },
+            {
+              "source": "#EMPTY#",
+              "target": "OngoingCharges"
+            }
+          ],
+          "hoverText": "Double click block to edit the mapping rules"
+        },
+        "widgets_values": [
+          "string",
+          false
+        ]
+      },
+      {
+        "id": 27,
+        "type": "Sources/xetra-source-v1.1",
+        "pos": [
+          73,
+          435
+        ],
+        "size": [
+          312,
+          188
+        ],
+        "flags": {},
+        "order": 8,
+        "mode": 0,
+        "inputs": [
+          {
+            "name": "Node",
+            "type": 0,
+            "link": 65
+          }
+        ],
+        "outputs": [
+          {
+            "name": "BLOOMBERG TICKER",
+            "links": [
+              66
+            ]
+          },
+          {
+            "name": "FUND CURRENCY",
+            "links": [
+              67
+            ]
+          },
+          {
+            "name": "ONGOING CHARGES",
+            "links": [
+              72,
+              74
+            ]
+          },
+          {
+            "name": "ISIN",
+            "links": [
+              69
+            ]
+          },
+          {
+            "name": "EXCHANGE TRADED FUNDS NAME",
+            "links": [
+              70
+            ]
+          },
+          {
+            "name": "USE OF PROFITS",
+            "links": [
+              71,
+              75
+            ]
+          }
+        ],
+        "properties": {},
+        "widgets_values": [
+          true
+        ]
+      },
+      {
+        "id": 28,
+        "type": "string/LowerCase",
+        "pos": [
+          541,
+          344
+        ],
+        "size": {
+          "0": 170,
+          "1": 26
+        },
+        "flags": {},
+        "order": 11,
+        "mode": 0,
+        "inputs": [
+          {
+            "name": "STRING",
+            "type": 0,
+            "link": 75
+          }
+        ],
+        "outputs": [
+          {
+            "name": "string",
+            "links": [
+              76
+            ]
           }
         ],
         "properties": {}
@@ -1052,26 +1347,10 @@
         0
       ],
       [
-        4,
-        1,
-        0,
-        6,
-        0,
-        0
-      ],
-      [
         14,
         10,
         0,
         9,
-        0,
-        0
-      ],
-      [
-        15,
-        6,
-        2,
-        8,
         0,
         0
       ],
@@ -1092,78 +1371,6 @@
         0
       ],
       [
-        37,
-        1,
-        1,
-        18,
-        2,
-        0
-      ],
-      [
-        38,
-        7,
-        0,
-        18,
-        1,
-        0
-      ],
-      [
-        39,
-        13,
-        0,
-        18,
-        0,
-        0
-      ],
-      [
-        40,
-        9,
-        0,
-        18,
-        3,
-        0
-      ],
-      [
-        41,
-        18,
-        0,
-        4,
-        0,
-        0
-      ],
-      [
-        42,
-        6,
-        0,
-        19,
-        0,
-        0
-      ],
-      [
-        43,
-        6,
-        1,
-        19,
-        1,
-        0
-      ],
-      [
-        45,
-        6,
-        5,
-        19,
-        4,
-        0
-      ],
-      [
-        47,
-        6,
-        2,
-        19,
-        8,
-        0
-      ],
-      [
         48,
         7,
         0,
@@ -1180,43 +1387,11 @@
         0
       ],
       [
-        50,
-        6,
-        4,
-        19,
-        5,
-        0
-      ],
-      [
-        51,
-        6,
-        4,
-        20,
-        0,
-        0
-      ],
-      [
         52,
         20,
         0,
         4,
         4,
-        0
-      ],
-      [
-        53,
-        6,
-        3,
-        21,
-        0,
-        0
-      ],
-      [
-        54,
-        21,
-        0,
-        19,
-        7,
         0
       ],
       [
@@ -1234,6 +1409,158 @@
         4,
         3,
         0
+      ],
+      [
+        57,
+        13,
+        0,
+        23,
+        0,
+        0
+      ],
+      [
+        58,
+        9,
+        0,
+        23,
+        3,
+        0
+      ],
+      [
+        59,
+        1,
+        1,
+        23,
+        2,
+        0
+      ],
+      [
+        60,
+        7,
+        0,
+        23,
+        1,
+        0
+      ],
+      [
+        61,
+        23,
+        0,
+        4,
+        0,
+        0
+      ],
+      [
+        62,
+        25,
+        0,
+        23,
+        4,
+        0
+      ],
+      [
+        63,
+        25,
+        0,
+        23,
+        5,
+        0
+      ],
+      [
+        64,
+        26,
+        0,
+        20,
+        0,
+        0
+      ],
+      [
+        65,
+        1,
+        0,
+        27,
+        0,
+        0
+      ],
+      [
+        66,
+        27,
+        0,
+        19,
+        0,
+        0
+      ],
+      [
+        67,
+        27,
+        1,
+        19,
+        1,
+        0
+      ],
+      [
+        69,
+        27,
+        3,
+        19,
+        5,
+        0
+      ],
+      [
+        70,
+        27,
+        4,
+        19,
+        4,
+        0
+      ],
+      [
+        71,
+        27,
+        5,
+        8,
+        0,
+        0
+      ],
+      [
+        72,
+        27,
+        2,
+        21,
+        0,
+        0
+      ],
+      [
+        73,
+        21,
+        0,
+        9,
+        3,
+        0
+      ],
+      [
+        74,
+        27,
+        2,
+        19,
+        7,
+        0
+      ],
+      [
+        75,
+        27,
+        5,
+        28,
+        0,
+        0
+      ],
+      [
+        76,
+        28,
+        0,
+        19,
+        8,
+        0
       ]
     ],
     "groups": [],
@@ -1244,7 +1571,8 @@
   "metadata": {
     "version": "00.01",
     "author": "",
+    "description": "",
     "title": "xetra",
-    "dateExported": "20/04/2020, 08:03:47"
+    "dateExported": "21/04/2020, 08:21:13"
   }
 }

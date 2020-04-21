@@ -1,37 +1,11 @@
-2020-04-20 08:07:29,830 INFO org.springframework.boot.StartupInfoLogger [main] Starting WebApplication on MacPro-4672 with PID 74143 (/Users/smitrovi/MarkLogic/dev/fonds-demo/marklogic-explorer-5.2.1.war started by smitrovi in /Users/smitrovi/MarkLogic/dev/fonds-demo)
-2020-04-20 08:07:29,835 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: default
-2020-04-20 08:07:31,456 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-9090"]
-2020-04-20 08:07:31,475 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
-2020-04-20 08:07:31,476 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.22]
-2020-04-20 08:07:32,348 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
-2020-04-20 08:07:33,682 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-9090"]
-2020-04-20 08:07:33,726 INFO org.springframework.boot.StartupInfoLogger [main] Started WebApplication in 4.546 seconds (JVM running for 5.099)
-2020-04-20 08:08:04,607 INFO org.apache.juli.logging.DirectJDKLog [http-nio-9090-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-04-20 08:14:04,630 INFO com.marklogic.client.io.DocumentMetadataHandle [http-nio-9090-exec-8] Parsing metadata structure from input stream
-2020-04-20 08:18:52,969 INFO com.marklogic.client.io.DocumentMetadataHandle [http-nio-9090-exec-4] Parsing metadata structure from input stream
-2020-04-20 08:34:20,789 INFO com.marklogic.client.io.DocumentMetadataHandle [http-nio-9090-exec-6] Parsing metadata structure from input stream
-2020-04-20 08:37:06,082 INFO com.marklogic.client.io.DocumentMetadataHandle [http-nio-9090-exec-4] Parsing metadata structure from input stream
-2020-04-20 08:43:34,012 ERROR com.marklogic.hub.explorer.util.SearchHelper [http-nio-9090-exec-6] Local message: search failed: Bad Request. Server Message: XDMP-ELEMRIDXNOTFOUND: cts:element-reference(fn:QName("","ExchangePlace"), ("type=string", "collation=http://marklogic.com/collation/codepoint")) -- No string element range index for ExchangePlace collation=http://marklogic.com/collation/codepoint 
-2020-04-20 08:43:34,012 ERROR com.marklogic.hub.explorer.util.SearchHelper [http-nio-9090-exec-9] Local message: search failed: Bad Request. Server Message: XDMP-ELEMRIDXNOTFOUND: cts:element-reference(fn:QName("","ExchangePlace"), ("type=string", "collation=http://marklogic.com/collation/codepoint")) -- No string element range index for ExchangePlace collation=http://marklogic.com/collation/codepoint 
-2020-04-20 08:43:43,687 ERROR com.marklogic.hub.explorer.util.SearchHelper [http-nio-9090-exec-3] Local message: search failed: Bad Request. Server Message: XDMP-ELEMRIDXNOTFOUND: cts:element-reference(fn:QName("","ExchangePlace"), ("type=string", "collation=http://marklogic.com/collation/codepoint")) -- No string element range index for ExchangePlace collation=http://marklogic.com/collation/codepoint 
-2020-04-20 08:43:52,045 ERROR com.marklogic.hub.explorer.util.SearchHelper [http-nio-9090-exec-2] Local message: search failed: Bad Request. Server Message: XDMP-ELEMRIDXNOTFOUND: cts:element-reference(fn:QName("","ExchangePlace"), ("type=string", "collation=http://marklogic.com/collation/codepoint")) -- No string element range index for ExchangePlace collation=http://marklogic.com/collation/codepoint 
-2020-04-20 08:44:55,258 ERROR com.marklogic.hub.explorer.util.SearchHelper [http-nio-9090-exec-10] Local message: search failed: Bad Request. Server Message: XDMP-ELEMRIDXNOTFOUND: cts:element-reference(fn:QName("","InceptionDate"), "type=date") -- No date element range index for InceptionDate  
-2020-04-20 08:45:00,117 ERROR com.marklogic.hub.explorer.util.SearchHelper [http-nio-9090-exec-9] Local message: search failed: Bad Request. Server Message: XDMP-ELEMRIDXNOTFOUND: cts:element-reference(fn:QName("","InceptionDate"), "type=date") -- No date element range index for InceptionDate  
-2020-04-20 08:45:01,210 ERROR com.marklogic.hub.explorer.util.SearchHelper [http-nio-9090-exec-10] Local message: search failed: Bad Request. Server Message: XDMP-ELEMRIDXNOTFOUND: cts:element-reference(fn:QName("","InceptionDate"), "type=date") -- No date element range index for InceptionDate  
-2020-04-20 08:45:10,662 ERROR com.marklogic.hub.explorer.util.SearchHelper [http-nio-9090-exec-8] Local message: search failed: Bad Request. Server Message: XDMP-ELEMRIDXNOTFOUND: cts:element-reference(fn:QName("","InceptionDate"), "type=date") -- No date element range index for InceptionDate  
-2020-04-20 08:45:12,345 ERROR com.marklogic.hub.explorer.util.SearchHelper [http-nio-9090-exec-1] Local message: search failed: Bad Request. Server Message: XDMP-ELEMRIDXNOTFOUND: cts:element-reference(fn:QName("","InceptionDate"), "type=date") -- No date element range index for InceptionDate  
-2020-04-20 08:45:12,926 ERROR com.marklogic.hub.explorer.util.SearchHelper [http-nio-9090-exec-8] Local message: search failed: Bad Request. Server Message: XDMP-ELEMRIDXNOTFOUND: cts:element-reference(fn:QName("","InceptionDate"), "type=date") -- No date element range index for InceptionDate  
-2020-04-20 08:45:13,577 ERROR com.marklogic.hub.explorer.util.SearchHelper [http-nio-9090-exec-9] Local message: search failed: Bad Request. Server Message: XDMP-ELEMRIDXNOTFOUND: cts:element-reference(fn:QName("","InceptionDate"), "type=date") -- No date element range index for InceptionDate  
-2020-04-20 08:45:13,893 ERROR com.marklogic.hub.explorer.util.SearchHelper [http-nio-9090-exec-9] Local message: search failed: Bad Request. Server Message: XDMP-ELEMRIDXNOTFOUND: cts:element-reference(fn:QName("","InceptionDate"), "type=date") -- No date element range index for InceptionDate  
-2020-04-20 08:47:09,394 INFO com.marklogic.client.io.DocumentMetadataHandle [http-nio-9090-exec-3] Parsing metadata structure from input stream
-2020-04-20 08:53:32,435 ERROR com.marklogic.hub.explorer.util.SearchHelper [http-nio-9090-exec-2] Local message: search failed: Bad Request. Server Message: XDMP-LEXVAL: xs:date("") -- Invalid lexical value ""
-2020-04-20 08:57:55,020 INFO com.marklogic.client.io.DocumentMetadataHandle [http-nio-9090-exec-1] Parsing metadata structure from input stream
-2020-04-20 08:58:09,880 INFO com.marklogic.client.io.DocumentMetadataHandle [http-nio-9090-exec-4] Parsing metadata structure from input stream
-2020-04-20 11:31:29,056 INFO com.marklogic.client.io.DocumentMetadataHandle [http-nio-9090-exec-8] Parsing metadata structure from input stream
-2020-04-20 11:35:38,634 INFO com.marklogic.client.io.DocumentMetadataHandle [http-nio-9090-exec-2] Parsing metadata structure from input stream
-2020-04-20 11:46:29,861 INFO com.marklogic.client.io.DocumentMetadataHandle [http-nio-9090-exec-5] Parsing metadata structure from input stream
-2020-04-20 11:50:19,008 INFO com.marklogic.client.io.DocumentMetadataHandle [http-nio-9090-exec-3] Parsing metadata structure from input stream
-2020-04-20 12:23:58,752 INFO com.marklogic.client.io.DocumentMetadataHandle [http-nio-9090-exec-9] Parsing metadata structure from input stream
-2020-04-20 12:24:43,676 INFO com.marklogic.client.io.DocumentMetadataHandle [http-nio-9090-exec-10] Parsing metadata structure from input stream
-2020-04-20 12:33:42,688 INFO com.marklogic.client.io.DocumentMetadataHandle [http-nio-9090-exec-9] Parsing metadata structure from input stream
-2020-04-20 12:36:07,615 INFO com.marklogic.client.io.DocumentMetadataHandle [http-nio-9090-exec-5] Parsing metadata structure from input stream
+2020-04-21 07:40:00,307 INFO com.marklogic.client.io.DocumentMetadataHandle [http-nio-9090-exec-5] Parsing metadata structure from input stream
+2020-04-21 07:55:00,255 INFO com.marklogic.client.io.DocumentMetadataHandle [http-nio-9090-exec-10] Parsing metadata structure from input stream
+2020-04-21 08:46:35,704 INFO com.marklogic.client.io.DocumentMetadataHandle [http-nio-9090-exec-4] Parsing metadata structure from input stream
+2020-04-21 08:47:43,460 INFO com.marklogic.client.io.DocumentMetadataHandle [http-nio-9090-exec-3] Parsing metadata structure from input stream
+2020-04-21 08:55:15,390 INFO com.marklogic.client.io.DocumentMetadataHandle [http-nio-9090-exec-1] Parsing metadata structure from input stream
+2020-04-21 08:56:51,909 INFO com.marklogic.client.io.DocumentMetadataHandle [http-nio-9090-exec-8] Parsing metadata structure from input stream
+2020-04-21 08:57:26,379 INFO com.marklogic.client.io.DocumentMetadataHandle [http-nio-9090-exec-3] Parsing metadata structure from input stream
+2020-04-21 08:57:56,053 INFO com.marklogic.client.io.DocumentMetadataHandle [http-nio-9090-exec-9] Parsing metadata structure from input stream
+2020-04-21 09:00:35,298 INFO com.marklogic.client.io.DocumentMetadataHandle [http-nio-9090-exec-7] Parsing metadata structure from input stream
+2020-04-21 10:24:24,061 INFO com.marklogic.client.io.DocumentMetadataHandle [http-nio-9090-exec-10] Parsing metadata structure from input stream
+2020-04-21 10:32:30,181 INFO com.marklogic.client.io.DocumentMetadataHandle [http-nio-9090-exec-8] Parsing metadata structure from input stream
