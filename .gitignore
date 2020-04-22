@@ -1,3 +1,5 @@
 logs/archived/
 marklogic-explorer-5.2.1.war
-marklogic-pipes-1.0.1.1587137048.jar
+marklogic-pipes-*.jar
+
+.gradle/
