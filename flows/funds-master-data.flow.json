@@ -37,13 +37,44 @@
       "stepDefinitionName" : "default-ingestion",
       "stepDefinitionType" : "INGESTION",
       "fileLocations" : {
-        "inputFilePath" : "/Users/smitrovi/MarkLogic/dev/fonds-demo/source/masterdatareports.com",
+        "inputFilePath" : "/Users/smitrovi/MarkLogic/dev/funds-demo/source/masterdatareports.com",
         "inputFileType" : "csv",
         "outputURIReplacement" : "",
         "separator" : ","
       }
     },
     "2" : {
+      "name" : "masterdatareports-mapping",
+      "description" : "",
+      "options" : {
+        "additionalCollections" : [ ],
+        "sourceQuery" : "cts.collectionQuery([\"masterdatareports-source\"])",
+        "mapping" : {
+          "name" : "funds-master-data-masterdatareports-mapping",
+          "version" : 0
+        },
+        "targetEntity" : "FundamentalInformation",
+        "sourceDatabase" : "funds-data-hub-STAGING",
+        "collections" : [ "masterdatareports-mapping", "FundamentalInformation" ],
+        "permissions" : "data-hub-operator,read,data-hub-operator,update",
+        "validateEntity" : false,
+        "sourceCollection" : "masterdatareports-source",
+        "outputFormat" : "json",
+        "targetDatabase" : "funds-data-hub-FINAL"
+      },
+      "customHook" : {
+        "module" : "",
+        "parameters" : { },
+        "user" : "",
+        "runBefore" : false
+      },
+      "retryLimit" : 0,
+      "batchSize" : 100,
+      "threadCount" : 4,
+      "stepDefinitionName" : "entity-services-mapping",
+      "stepDefinitionType" : "MAPPING"
+    },
+    "3" : {
       "name" : "openfunds-source",
       "description" : "",
       "options" : {
@@ -73,13 +104,44 @@
       "stepDefinitionName" : "default-ingestion",
       "stepDefinitionType" : "INGESTION",
       "fileLocations" : {
-        "inputFilePath" : "/Users/smitrovi/MarkLogic/dev/fonds-demo/source/openfunds",
+        "inputFilePath" : "/Users/smitrovi/MarkLogic/dev/funds-demo/source/openfunds",
         "inputFileType" : "csv",
         "outputURIReplacement" : "",
         "separator" : ";"
       }
     },
-    "3" : {
+    "4" : {
+      "name" : "opendata-eu-mapping",
+      "description" : "",
+      "options" : {
+        "additionalCollections" : [ ],
+        "sourceQuery" : "cts.collectionQuery([\"openfunds-source\"])",
+        "mapping" : {
+          "name" : "funds-master-data-opendata-eu-mapping",
+          "version" : 0
+        },
+        "targetEntity" : "FundamentalInformation",
+        "sourceDatabase" : "funds-data-hub-STAGING",
+        "collections" : [ "opendata-eu-mapping", "FundamentalInformation" ],
+        "permissions" : "data-hub-operator,read,data-hub-operator,update",
+        "validateEntity" : false,
+        "sourceCollection" : "openfunds-source",
+        "outputFormat" : "json",
+        "targetDatabase" : "funds-data-hub-FINAL"
+      },
+      "customHook" : {
+        "module" : "",
+        "parameters" : { },
+        "user" : "",
+        "runBefore" : false
+      },
+      "retryLimit" : 0,
+      "batchSize" : 100,
+      "threadCount" : 4,
+      "stepDefinitionName" : "entity-services-mapping",
+      "stepDefinitionType" : "MAPPING"
+    },
+    "5" : {
       "name" : "xetra-source",
       "description" : "",
       "options" : {
@@ -109,17 +171,17 @@
       "stepDefinitionName" : "default-ingestion",
       "stepDefinitionType" : "INGESTION",
       "fileLocations" : {
-        "inputFilePath" : "/Users/smitrovi/MarkLogic/dev/fonds-demo/source/xetra",
+        "inputFilePath" : "/Users/smitrovi/MarkLogic/dev/funds-demo/source/xetra",
         "inputFileType" : "csv",
         "outputURIReplacement" : "",
         "separator" : ";"
       }
     },
-    "4" : {
+    "6" : {
       "name" : "xetra-mapping",
       "description" : "",
       "options" : {
-        "additionalCollections" : [ ],
+        "additionalCollections" : [ "temporal-collection" ],
         "sourceQuery" : "cts.collectionQuery([\"xetra-source\"])",
         "mapping" : {
           "name" : "funds-master-data-xetra-mapping",
@@ -127,7 +189,7 @@
         },
         "targetEntity" : "FundamentalInformation",
         "sourceDatabase" : "funds-data-hub-STAGING",
-        "collections" : [ "xetra-mapping" ],
+        "collections" : [ "xetra-mapping", "FundamentalInformation", "temporal-collection" ],
         "permissions" : "data-hub-operator,read,data-hub-operator,update",
         "validateEntity" : false,
         "sourceCollection" : "xetra-source",
@@ -140,20 +202,20 @@
         "user" : "",
         "runBefore" : false
       },
-      "retryLimit" : null,
+      "retryLimit" : 0,
       "batchSize" : 100,
       "threadCount" : 4,
       "stepDefinitionName" : "entity-services-mapping",
       "stepDefinitionType" : "MAPPING"
     },
-    "5" : {
+    "7" : {
       "name" : "harmonize-masterdatareports",
       "description" : "",
       "options" : {
-        "additionalCollections" : [ "harmonized" ],
+        "additionalCollections" : [ "harmonized", "temporal-collection" ],
         "sourceQuery" : "cts.collectionQuery([\"masterdatareports-source\"])",
         "targetEntity" : "FundamentalInformation",
-        "collections" : [ "harmonize-masterdatareports", "FundamentalInformation", "harmonized" ],
+        "collections" : [ "harmonize-masterdatareports", "FundamentalInformation", "harmonized", "temporal-collection" ],
         "sourceDatabase" : "funds-data-hub-STAGING",
         "permissions" : "data-hub-operator,read,data-hub-operator,update",
         "sourceCollection" : "masterdatareports-source",
@@ -172,14 +234,14 @@
       "stepDefinitionName" : "harmonize-masterdatareports",
       "stepDefinitionType" : "CUSTOM"
     },
-    "6" : {
+    "8" : {
       "name" : "harmonize-openfunds",
       "description" : "",
       "options" : {
-        "additionalCollections" : [ ],
+        "additionalCollections" : [ "harmonized", "temporal-collection" ],
         "sourceQuery" : "cts.collectionQuery([\"openfunds-source\"])",
         "targetEntity" : "FundamentalInformation",
-        "collections" : [ "harmonize-openfunds", "FundamentalInformation" ],
+        "collections" : [ "harmonize-openfunds", "FundamentalInformation", "harmonized", "temporal-collection" ],
         "sourceDatabase" : "funds-data-hub-STAGING",
         "permissions" : "data-hub-operator,read,data-hub-operator,update",
         "sourceCollection" : "openfunds-source",
@@ -198,14 +260,14 @@
       "stepDefinitionName" : "harmonize-openfunds",
       "stepDefinitionType" : "CUSTOM"
     },
-    "7" : {
+    "9" : {
       "name" : "xetra-harmonize",
       "description" : "",
       "options" : {
-        "additionalCollections" : [ ],
+        "additionalCollections" : [ "harmonized", "temporal-collection" ],
         "sourceQuery" : "cts.collectionQuery([\"xetra-source\"])",
         "targetEntity" : "FundamentalInformation",
-        "collections" : [ "xetra-harmonize", "FundamentalInformation" ],
+        "collections" : [ "xetra-harmonize", "FundamentalInformation", "harmonized", "temporal-collection" ],
         "sourceDatabase" : "funds-data-hub-STAGING",
         "permissions" : "data-hub-operator,read,data-hub-operator,update",
         "sourceCollection" : "xetra-source",

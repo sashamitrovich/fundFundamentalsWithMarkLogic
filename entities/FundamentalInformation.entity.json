@@ -10,8 +10,8 @@
       "required" : [ ],
       "pii" : [ ],
       "elementRangeIndex" : [ ],
-      "rangeIndex" : [ "ExchangePlace", "Currency", "ShareClassDistributionPolicy" ],
-      "wordLexicon" : [ "ExchangePlace", "Currency", "ShareClassDistributionPolicy" ],
+      "rangeIndex" : [ ],
+      "wordLexicon" : [ ],
       "properties" : {
         "FundName" : {
           "datatype" : "string",
@@ -29,11 +29,11 @@
         },
         "InceptionDate" : {
           "datatype" : "date",
-          "description" : "Date of founding"
+          "description" : "Date of founding",
+          "collation" : "http://marklogic.com/collation/codepoint"
         },
         "Currency" : {
           "datatype" : "string",
-          "description" : "",
           "collation" : "http://marklogic.com/collation/codepoint"
         },
         "OngoingCharges" : {

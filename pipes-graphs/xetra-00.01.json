@@ -1,5 +1,5 @@
 {
-  "pipesFileVersion": 1,
+  "pipesFileVersion": 2,
   "models": [
     {
       "label": "masterdatareports-source",
@@ -602,12 +602,12 @@
     }
   ],
   "executionGraph": {
-    "last_node_id": 28,
-    "last_link_id": 76,
+    "last_node_id": 39,
+    "last_link_id": 98,
     "nodes": [
       {
         "id": 2,
-        "type": "dhf/output",
+        "type": "DHF/output",
         "pos": [
           1772,
           533
@@ -630,7 +630,7 @@
       },
       {
         "id": 4,
-        "type": "dhf/envelope",
+        "type": "DHF/envelope",
         "pos": [
           1536,
           468
@@ -721,7 +721,7 @@
           {
             "name": "ExchangePlace",
             "type": 0,
-            "link": 48
+            "link": 85
           },
           {
             "name": "FundName",
@@ -746,7 +746,7 @@
           {
             "name": "ShareClassDistributionPolicy",
             "type": 0,
-            "link": 76
+            "link": 84
           }
         ],
         "outputs": [
@@ -769,11 +769,57 @@
         ]
       },
       {
-        "id": 16,
-        "type": "string/constant",
+        "id": 20,
+        "type": "Generate/Templating",
         "pos": [
-          37,
-          690
+          1200,
+          213
+        ],
+        "size": {
+          "0": 255,
+          "1": 146
+        },
+        "flags": {},
+        "order": 7,
+        "mode": 0,
+        "inputs": [
+          {
+            "name": "v1",
+            "type": 0,
+            "link": 64
+          },
+          {
+            "name": "v2",
+            "type": 0,
+            "link": 86
+          },
+          {
+            "name": "v3",
+            "type": 0,
+            "link": null
+          }
+        ],
+        "outputs": [
+          {
+            "name": "newString",
+            "links": [
+              52
+            ]
+          }
+        ],
+        "properties": {},
+        "widgets_values": [
+          "",
+          "",
+          "/fund/${v2}/${v1}.json"
+        ]
+      },
+      {
+        "id": 26,
+        "type": "Generate/uuid",
+        "pos": [
+          545.485293602798,
+          152.814513476065
         ],
         "size": {
           "0": 255,
@@ -784,23 +830,226 @@
         "mode": 0,
         "outputs": [
           {
-            "name": "value",
+            "name": "uuid",
             "links": [
-              34
+              64
             ]
           }
         ],
         "properties": {},
         "widgets_values": [
-          "Description"
+          ""
+        ]
+      },
+      {
+        "id": 36,
+        "type": "Generate/multiConstant",
+        "pos": [
+          432,
+          665
+        ],
+        "size": {
+          "0": 255,
+          "1": 82
+        },
+        "flags": {},
+        "order": 1,
+        "mode": 0,
+        "outputs": [
+          {
+            "name": "output",
+            "links": [
+              85,
+              86,
+              87
+            ]
+          }
+        ],
+        "properties": {},
+        "widgets_values": [
+          "string",
+          "XETRA"
+        ]
+      },
+      {
+        "id": 23,
+        "type": "Sources/lineage",
+        "pos": [
+          1087,
+          752
+        ],
+        "size": [
+          305,
+          188
+        ],
+        "flags": {},
+        "order": 14,
+        "mode": 0,
+        "inputs": [
+          {
+            "name": "numHarmonized",
+            "type": 0,
+            "link": 77
+          },
+          {
+            "name": "source",
+            "type": 0,
+            "link": 87
+          },
+          {
+            "name": "sourceUri",
+            "type": 0,
+            "link": 59
+          },
+          {
+            "name": "missingSourceFor",
+            "type": 0,
+            "link": 93
+          },
+          {
+            "name": "systemStart",
+            "type": 0,
+            "link": 81
+          },
+          {
+            "name": "systemEnd",
+            "type": 0,
+            "link": 82
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Node",
+            "type": "Node",
+            "links": [
+              61
+            ]
+          },
+          {
+            "name": "Prov",
+            "type": null,
+            "links": null
+          }
+        ],
+        "properties": {},
+        "widgets_values": [
+          true
+        ]
+      },
+      {
+        "id": 30,
+        "type": "Generate/multiConstant",
+        "pos": [
+          619,
+          836
+        ],
+        "size": {
+          "0": 255,
+          "1": 82
+        },
+        "flags": {},
+        "order": 2,
+        "mode": 0,
+        "outputs": [
+          {
+            "name": "output",
+            "links": [
+              77
+            ]
+          }
+        ],
+        "properties": {},
+        "widgets_values": [
+          "number",
+          "7"
+        ]
+      },
+      {
+        "id": 32,
+        "type": "Join/Array",
+        "pos": [
+          734,
+          997
+        ],
+        "size": {
+          "0": 170,
+          "1": 106
+        },
+        "flags": {},
+        "order": 12,
+        "mode": 0,
+        "inputs": [
+          {
+            "name": "item1",
+            "type": 0,
+            "link": 94
+          },
+          {
+            "name": "item2",
+            "type": 0,
+            "link": 95
+          },
+          {
+            "name": "item3",
+            "type": 0,
+            "link": 96
+          },
+          {
+            "name": "item4",
+            "type": 0,
+            "link": 97
+          },
+          {
+            "name": "item5",
+            "type": 0,
+            "link": null
+          }
+        ],
+        "outputs": [
+          {
+            "name": "array",
+            "links": [
+              93
+            ]
+          }
+        ],
+        "properties": {}
+      },
+      {
+        "id": 33,
+        "type": "Generate/multiConstant",
+        "pos": [
+          726,
+          1187
+        ],
+        "size": {
+          "0": 255,
+          "1": 82
+        },
+        "flags": {},
+        "order": 3,
+        "mode": 0,
+        "outputs": [
+          {
+            "name": "output",
+            "links": [
+              81,
+              82
+            ]
+          }
+        ],
+        "properties": {},
+        "widgets_values": [
+          "string",
+          ""
         ]
       },
       {
         "id": 8,
-        "type": "string/Map values",
+        "type": "Mapping/Map values",
         "pos": [
-          205,
-          970
+          209,
+          936
         ],
         "size": {
           "0": 255,
@@ -825,7 +1074,7 @@
           {
             "name": "mappedValue",
             "links": [
-              16
+              94
             ]
           }
         ],
@@ -849,311 +1098,120 @@
         ]
       },
       {
-        "id": 20,
-        "type": "string/Templating",
+        "id": 38,
+        "type": "Mapping/Map values",
         "pos": [
-          1200,
-          213
+          214,
+          1105
         ],
         "size": {
           "0": 255,
-          "1": 146
+          "1": 102
         },
         "flags": {},
-        "order": 7,
+        "order": 9,
         "mode": 0,
         "inputs": [
           {
-            "name": "v1",
+            "name": "value",
             "type": 0,
-            "link": 64
+            "link": 91
           },
           {
-            "name": "v2",
-            "type": 0,
-            "link": 55
-          },
-          {
-            "name": "v3",
+            "name": "default",
             "type": 0,
             "link": null
           }
         ],
         "outputs": [
           {
-            "name": "newString",
+            "name": "mappedValue",
             "links": [
-              52
+              95
             ]
           }
         ],
-        "properties": {},
-        "widgets_values": [
-          "",
-          "",
-          "/fund/${v2}/${v1}.json"
-        ]
-      },
-      {
-        "id": 13,
-        "type": "basic/const",
-        "pos": [
-          543,
-          784
-        ],
-        "size": {
-          "0": 170,
-          "1": 26
-        },
-        "flags": {},
-        "order": 1,
-        "mode": 0,
-        "outputs": [
-          {
-            "name": "value",
-            "links": [
-              57
-            ]
-          }
-        ],
+        "title": "check OngoingCharges",
         "properties": {
-          "value": "7"
-        }
-      },
-      {
-        "id": 9,
-        "type": "basic/Array",
-        "pos": [
-          591,
-          965
-        ],
-        "size": {
-          "0": 170,
-          "1": 106
+          "mapping": [
+            {
+              "source": "#NULL#",
+              "target": "ShareClassDistributionPolicy"
+            },
+            {
+              "source": "#EMPTY#",
+              "target": "ShareClassDistributionPolicy"
+            }
+          ],
+          "hoverText": "Double click block to edit the mapping rules"
         },
-        "flags": {},
-        "order": 12,
-        "mode": 0,
-        "inputs": [
-          {
-            "name": "item1",
-            "type": 0,
-            "link": 14
-          },
-          {
-            "name": "item2",
-            "type": 0,
-            "link": 16
-          },
-          {
-            "name": "item3",
-            "type": 0,
-            "link": 34
-          },
-          {
-            "name": "item4",
-            "type": 0,
-            "link": 73
-          },
-          {
-            "name": "item5",
-            "type": 0,
-            "link": null
-          }
-        ],
-        "outputs": [
-          {
-            "name": "array",
-            "links": [
-              58
-            ]
-          }
-        ],
-        "properties": {}
-      },
-      {
-        "id": 10,
-        "type": "string/constant",
-        "pos": [
-          271,
-          844
-        ],
-        "size": {
-          "0": 255,
-          "1": 58
-        },
-        "flags": {},
-        "order": 2,
-        "mode": 0,
-        "outputs": [
-          {
-            "name": "value",
-            "links": [
-              14
-            ]
-          }
-        ],
-        "properties": {},
         "widgets_values": [
-          "InceptionDate"
+          "string",
+          false
         ]
       },
       {
-        "id": 7,
-        "type": "string/constant",
+        "id": 31,
+        "type": "Generate/multiConstant",
         "pos": [
-          439,
-          670
+          200,
+          1282
         ],
         "size": {
           "0": 255,
-          "1": 58
-        },
-        "flags": {},
-        "order": 3,
-        "mode": 0,
-        "outputs": [
-          {
-            "name": "value",
-            "links": [
-              48,
-              55,
-              60
-            ]
-          }
-        ],
-        "properties": {},
-        "widgets_values": [
-          "XETRA"
-        ]
-      },
-      {
-        "id": 23,
-        "type": "Sources/lineage",
-        "pos": [
-          972.0691832424296,
-          752.9529837055554
-        ],
-        "size": [
-          305,
-          188
-        ],
-        "flags": {},
-        "order": 14,
-        "mode": 0,
-        "inputs": [
-          {
-            "name": "numHarmonized",
-            "type": 0,
-            "link": 57
-          },
-          {
-            "name": "source",
-            "type": 0,
-            "link": 60
-          },
-          {
-            "name": "sourceUri",
-            "type": 0,
-            "link": 59
-          },
-          {
-            "name": "missingSourceFor",
-            "type": 0,
-            "link": 58
-          },
-          {
-            "name": "systemStart",
-            "type": 0,
-            "link": 62
-          },
-          {
-            "name": "systemEnd",
-            "type": 0,
-            "link": 63
-          }
-        ],
-        "outputs": [
-          {
-            "name": "Node",
-            "type": "Node",
-            "links": [
-              61
-            ]
-          },
-          {
-            "name": "Prov",
-            "type": null,
-            "links": null
-          }
-        ],
-        "properties": {},
-        "widgets_values": [
-          true
-        ]
-      },
-      {
-        "id": 25,
-        "type": "string/constant",
-        "pos": [
-          779,
-          1122
-        ],
-        "size": {
-          "0": 255,
-          "1": 58
+          "1": 82
         },
         "flags": {},
         "order": 4,
         "mode": 0,
         "outputs": [
           {
-            "name": "value",
+            "name": "output",
             "links": [
-              62,
-              63
+              96
             ]
           }
         ],
-        "title": "empty",
         "properties": {},
         "widgets_values": [
-          ""
+          "string",
+          "Description"
         ]
       },
       {
-        "id": 26,
-        "type": "string/uuid",
+        "id": 37,
+        "type": "Generate/multiConstant",
         "pos": [
-          545.4852936027983,
-          152.8145134760651
+          198,
+          1452
         ],
         "size": {
           "0": 255,
-          "1": 58
+          "1": 82
         },
         "flags": {},
         "order": 5,
         "mode": 0,
         "outputs": [
           {
-            "name": "uuid",
+            "name": "output",
             "links": [
-              64
+              97
             ]
           }
         ],
         "properties": {},
         "widgets_values": [
-          ""
+          "string",
+          "InceptionDate"
         ]
       },
       {
         "id": 1,
-        "type": "dhf/input",
+        "type": "DHF/input",
         "pos": [
-          -236,
-          475
+          -582,
+          486
         ],
         "size": [
           180,
@@ -1187,64 +1245,11 @@
         "properties": {}
       },
       {
-        "id": 21,
-        "type": "string/Map values",
-        "pos": [
-          245,
-          1165
-        ],
-        "size": {
-          "0": 255,
-          "1": 102
-        },
-        "flags": {},
-        "order": 9,
-        "mode": 0,
-        "inputs": [
-          {
-            "name": "value",
-            "type": 0,
-            "link": 72
-          },
-          {
-            "name": "default",
-            "type": 0,
-            "link": null
-          }
-        ],
-        "outputs": [
-          {
-            "name": "mappedValue",
-            "links": [
-              73
-            ]
-          }
-        ],
-        "title": "OngoingCharges",
-        "properties": {
-          "mapping": [
-            {
-              "source": "#NULL#",
-              "target": "OngoingCharges"
-            },
-            {
-              "source": "#EMPTY#",
-              "target": "OngoingCharges"
-            }
-          ],
-          "hoverText": "Double click block to edit the mapping rules"
-        },
-        "widgets_values": [
-          "string",
-          false
-        ]
-      },
-      {
         "id": 27,
         "type": "Sources/xetra-source-v1.1",
         "pos": [
-          73,
-          435
+          -269,
+          623
         ],
         "size": [
           312,
@@ -1276,8 +1281,8 @@
           {
             "name": "ONGOING CHARGES",
             "links": [
-              72,
-              74
+              74,
+              91
             ]
           },
           {
@@ -1296,7 +1301,7 @@
             "name": "USE OF PROFITS",
             "links": [
               71,
-              75
+              83
             ]
           }
         ],
@@ -1306,35 +1311,38 @@
         ]
       },
       {
-        "id": 28,
-        "type": "string/LowerCase",
+        "id": 35,
+        "type": "Transform/stringCase",
         "pos": [
-          541,
-          344
+          310,
+          377
         ],
         "size": {
-          "0": 170,
-          "1": 26
+          "0": 255,
+          "1": 58
         },
         "flags": {},
         "order": 11,
         "mode": 0,
         "inputs": [
           {
-            "name": "STRING",
+            "name": "input",
             "type": 0,
-            "link": 75
+            "link": 83
           }
         ],
         "outputs": [
           {
-            "name": "string",
+            "name": "output",
             "links": [
-              76
+              84
             ]
           }
         ],
-        "properties": {}
+        "properties": {},
+        "widgets_values": [
+          "lowercase"
+        ]
       }
     ],
     "links": [
@@ -1344,38 +1352,6 @@
         0,
         2,
         0,
-        0
-      ],
-      [
-        14,
-        10,
-        0,
-        9,
-        0,
-        0
-      ],
-      [
-        16,
-        8,
-        0,
-        9,
-        1,
-        0
-      ],
-      [
-        34,
-        16,
-        0,
-        9,
-        2,
-        0
-      ],
-      [
-        48,
-        7,
-        0,
-        19,
-        3,
         0
       ],
       [
@@ -1395,34 +1371,10 @@
         0
       ],
       [
-        55,
-        7,
-        0,
-        20,
-        1,
-        0
-      ],
-      [
         56,
         1,
         0,
         4,
-        3,
-        0
-      ],
-      [
-        57,
-        13,
-        0,
-        23,
-        0,
-        0
-      ],
-      [
-        58,
-        9,
-        0,
-        23,
         3,
         0
       ],
@@ -1435,35 +1387,11 @@
         0
       ],
       [
-        60,
-        7,
-        0,
-        23,
-        1,
-        0
-      ],
-      [
         61,
         23,
         0,
         4,
         0,
-        0
-      ],
-      [
-        62,
-        25,
-        0,
-        23,
-        4,
-        0
-      ],
-      [
-        63,
-        25,
-        0,
-        23,
-        5,
         0
       ],
       [
@@ -1523,22 +1451,6 @@
         0
       ],
       [
-        72,
-        27,
-        2,
-        21,
-        0,
-        0
-      ],
-      [
-        73,
-        21,
-        0,
-        9,
-        3,
-        0
-      ],
-      [
         74,
         27,
         2,
@@ -1547,19 +1459,115 @@
         0
       ],
       [
-        75,
-        27,
-        5,
-        28,
+        77,
+        30,
+        0,
+        23,
         0,
         0
       ],
       [
-        76,
-        28,
+        81,
+        33,
+        0,
+        23,
+        4,
+        0
+      ],
+      [
+        82,
+        33,
+        0,
+        23,
+        5,
+        0
+      ],
+      [
+        83,
+        27,
+        5,
+        35,
+        0,
+        0
+      ],
+      [
+        84,
+        35,
         0,
         19,
         8,
+        0
+      ],
+      [
+        85,
+        36,
+        0,
+        19,
+        3,
+        0
+      ],
+      [
+        86,
+        36,
+        0,
+        20,
+        1,
+        0
+      ],
+      [
+        87,
+        36,
+        0,
+        23,
+        1,
+        0
+      ],
+      [
+        91,
+        27,
+        2,
+        38,
+        0,
+        0
+      ],
+      [
+        93,
+        32,
+        0,
+        23,
+        3,
+        0
+      ],
+      [
+        94,
+        8,
+        0,
+        32,
+        0,
+        0
+      ],
+      [
+        95,
+        38,
+        0,
+        32,
+        1,
+        0
+      ],
+      [
+        96,
+        31,
+        0,
+        32,
+        2,
+        0
+      ],
+      [
+        97,
+        37,
+        0,
+        32,
+        3,
         0
       ]
     ],
@@ -1567,12 +1575,12 @@
     "config": {},
     "version": 0.4
   },
-  "name": "xetra",
+  "name": "xetra-v3",
   "metadata": {
     "version": "00.01",
     "author": "",
+    "title": "xetra-v3",
     "description": "",
-    "title": "xetra",
-    "dateExported": "21/04/2020, 08:21:13"
+    "dateExported": "22/04/2020, 10:06:39"
   }
 }
