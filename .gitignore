@@ -1,6 +1,7 @@
 logs/archived/
 marklogic-explorer-5.2.1.war
 marklogic-pipes-*.jar
+source/openfunds/data.csv
 
 .gradle/
 .DS_Store
@@ -9,6 +10,7 @@ marklogic-pipes-*.jar
 *.jar
 *.zip
 *.log
+*.war
 
 conceptConnectorModels
 src/main/ml-modules/root/custom-modules/pipes

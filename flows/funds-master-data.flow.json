@@ -98,7 +98,7 @@
         "user" : "",
         "runBefore" : false
       },
-      "retryLimit" : 0,
+      "retryLimit" : null,
       "batchSize" : 100,
       "threadCount" : 4,
       "stepDefinitionName" : "default-ingestion",
