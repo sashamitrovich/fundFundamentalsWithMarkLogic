@@ -1,0 +1,11 @@
+~/MarkLogic/apps/mlcp-10.0.2/bin/mlcp.sh import -mode "local" -host "localhost" \
+    -port "8020" -username admin -password admin \
+    -input_file_path "./source/opendata.eu/select.xml" \
+    -input_file_type "aggregates" \
+    -output_collections "opendata.eu-source" \
+    -output_permissions "rest-reader,read,rest-writer,update" \
+    -document_type "xml" \
+    -input_file_pattern ".*.xml" \
+    -aggregate_record_element "doc"
+-transform_module "/data-hub/5/transforms/mlcp-flow-transform.sjs" \
+    -transform_namespace "http://marklogic.com/data-hub/mlcp-flow-transform"

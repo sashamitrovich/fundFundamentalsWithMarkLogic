@@ -5,19 +5,19 @@
   "version" : 0,
   "targetEntityType" : "http://example.org/FundamentalInformation-0.0.1/FundamentalInformation",
   "sourceContext" : "/",
-  "sourceURI" : "/Users/smitrovi/MarkLogic/dev/fonds-demo/source/xetra/13414025-3e00-402d-8d09-a1750a3e17dd.json",
+  "sourceURI" : "/Users/smitrovi/MarkLogic/dev/funds-demo/source/xetra/4522100a-28aa-4bc6-b70e-bd32515812d2.json",
   "properties" : {
     "OngoingCharges" : {
       "sourcedFrom" : "*[local-name(.)='ONGOING CHARGES']"
     },
     "Description" : {
-      "sourcedFrom" : "*[local-name(.)='HOMEPAGE ISSUER']"
+      "sourcedFrom" : "BENCHMARK"
     },
     "ExchangePlace" : {
-      "sourcedFrom" : "string(\"Xetra\")"
+      "sourcedFrom" : "\"XETRA\""
     },
     "FundName" : {
-      "sourcedFrom" : "ISIN"
+      "sourcedFrom" : "*[local-name(.)='EXCHANGE TRADED FUNDS NAME']"
     },
     "Currency" : {
       "sourcedFrom" : "*[local-name(.)='TRADING CURRENCY']"

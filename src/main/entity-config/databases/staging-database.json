@@ -4,38 +4,6 @@
     "prefix" : "es",
     "namespace-uri" : "http://marklogic.com/entity-services"
   } ],
-  "element-word-lexicon" : [ {
-    "collation" : "http://marklogic.com/collation/codepoint",
-    "localname" : "ExchangePlace",
-    "namespace-uri" : ""
-  }, {
-    "collation" : "http://marklogic.com/collation/codepoint",
-    "localname" : "Currency",
-    "namespace-uri" : ""
-  }, {
-    "collation" : "http://marklogic.com/collation/codepoint",
-    "localname" : "ShareClassDistributionPolicy",
-    "namespace-uri" : ""
-  } ],
-  "range-path-index" : [ {
-    "invalid-values" : "reject",
-    "path-expression" : "//*:instance/FundamentalInformation/ExchangePlace",
-    "range-value-positions" : false,
-    "scalar-type" : "string",
-    "collation" : "http://marklogic.com/collation/codepoint"
-  }, {
-    "invalid-values" : "reject",
-    "path-expression" : "//*:instance/FundamentalInformation/Currency",
-    "range-value-positions" : false,
-    "scalar-type" : "string",
-    "collation" : "http://marklogic.com/collation/codepoint"
-  }, {
-    "invalid-values" : "reject",
-    "path-expression" : "//*:instance/FundamentalInformation/ShareClassDistributionPolicy",
-    "range-value-positions" : false,
-    "scalar-type" : "string",
-    "collation" : "http://marklogic.com/collation/codepoint"
-  } ],
   "range-element-index" : [ ],
   "database-name" : "%%mlStagingDbName%%"
 }

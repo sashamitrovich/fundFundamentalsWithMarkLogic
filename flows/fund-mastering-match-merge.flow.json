@@ -12,12 +12,12 @@
       "description" : "",
       "options" : {
         "stepUpdate" : false,
-        "additionalCollections" : [ ],
+        "additionalCollections" : [ "matched", "temporal-collection" ],
         "sourceQuery" : "cts.collectionQuery([\"FundamentalInformation\"])",
         "acceptsBatch" : true,
         "targetEntity" : "FundamentalInformation",
         "sourceDatabase" : "funds-data-hub-FINAL",
-        "collections" : [ "match-fund-fundamental-data", "FundamentalInformation" ],
+        "collections" : [ "match-fund-fundamental-data", "FundamentalInformation", "matched", "temporal-collection" ],
         "permissions" : "data-hub-operator,read,data-hub-operator,update",
         "matchOptions" : {
           "propertyDefs" : {
@@ -109,12 +109,12 @@
       "description" : "",
       "options" : {
         "stepUpdate" : false,
-        "additionalCollections" : [ ],
+        "additionalCollections" : [ "merging-fix-3", "temporal-collection" ],
         "sourceQuery" : "cts.collectionQuery([\"FundamentalInformation\"])",
         "acceptsBatch" : false,
         "targetEntity" : "FundamentalInformation",
         "sourceDatabase" : "funds-data-hub-FINAL",
-        "collections" : [ "merge-fund-fundamental-data", "FundamentalInformation" ],
+        "collections" : [ "merge-fund-fundamental-data", "FundamentalInformation", "merging-fix-3", "temporal-collection" ],
         "mergeOptions" : {
           "matchOptions" : "",
           "propertyDefs" : {
@@ -164,7 +164,7 @@
         "user" : "",
         "runBefore" : false
       },
-      "retryLimit" : null,
+      "retryLimit" : 0,
       "batchSize" : 100,
       "threadCount" : 4,
       "stepDefinitionName" : "default-merging",

@@ -1,0 +1,36 @@
+{
+  "lang" : "zxx",
+  "name" : "funds-master-data-opendata-eu-mapping",
+  "description" : "",
+  "version" : 0,
+  "targetEntityType" : "http://example.org/FundamentalInformation-0.0.1/FundamentalInformation",
+  "sourceContext" : "/",
+  "sourceURI" : "/Users/smitrovi/MarkLogic/dev/funds-demo/source/openfunds/00a04cae-18f0-452d-b067-5489dd66c686.json",
+  "properties" : {
+    "OngoingCharges" : {
+      "sourcedFrom" : "*[local-name(.)='Ongoing Charges']"
+    },
+    "Description" : {
+      "sourcedFrom" : "*[local-name(.)='Investment Objective']"
+    },
+    "FundName" : {
+      "sourcedFrom" : "*[local-name(.)='Legal Fund Name Including Umbrella']"
+    },
+    "InceptionDate" : {
+      "sourcedFrom" : "doc/str[@name=\"registrationDateStr\"]"
+    },
+    "Currency" : {
+      "sourcedFrom" : "*[local-name(.)='Fund Currency']"
+    },
+    "ShareClassDistributionPolicy" : {
+      "sourcedFrom" : "*[local-name(.)='Share Class Distribution Policy']"
+    },
+    "ISIN" : {
+      "sourcedFrom" : "ISIN"
+    },
+    "BloombergSymbol" : {
+      "sourcedFrom" : "*[local-name(.)='iNAV Bloomberg Code Of Listing']"
+    }
+  },
+  "namespaces" : { }
+}

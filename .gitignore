@@ -3,3 +3,13 @@ marklogic-explorer-5.2.1.war
 marklogic-pipes-*.jar
 
 .gradle/
+.DS_Store
+.pipes
+.tmp
+*.jar
+*.zip
+*.log
+
+conceptConnectorModels
+src/main/ml-modules/root/custom-modules/pipes
+src/main/ml-modules/services/vppBackendServices.sjs

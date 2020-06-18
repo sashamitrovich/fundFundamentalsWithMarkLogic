@@ -1,0 +1,36 @@
+{
+  "lang" : "zxx",
+  "name" : "funds-master-data-masterdatareports-mapping",
+  "description" : "",
+  "version" : 0,
+  "targetEntityType" : "http://example.org/FundamentalInformation-0.0.1/FundamentalInformation",
+  "sourceContext" : "/",
+  "sourceURI" : "/Users/smitrovi/MarkLogic/dev/funds-demo/source/masterdatareports.com/6acf0c3a-4aac-4ea9-bf0c-277370985325.json",
+  "properties" : {
+    "OngoingCharges" : {
+      "sourcedFrom" : "*[local-name(.)='Expense Ratio']"
+    },
+    "Description" : {
+      "sourcedFrom" : "*[local-name(.)='ETF Type']"
+    },
+    "ExchangePlace" : {
+      "sourcedFrom" : "Exchange"
+    },
+    "FundName" : {
+      "sourcedFrom" : "*[local-name(.)='Composite Name']"
+    },
+    "InceptionDate" : {
+      "sourcedFrom" : "*[local-name(.)='Inception Date']"
+    },
+    "Currency" : {
+      "sourcedFrom" : "\"USD\""
+    },
+    "ISIN" : {
+      "sourcedFrom" : "ISIN"
+    },
+    "BloombergSymbol" : {
+      "sourcedFrom" : "*[local-name(.)='Bloomberg Symbol']"
+    }
+  },
+  "namespaces" : { }
+}
